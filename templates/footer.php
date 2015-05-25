@@ -2,11 +2,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-5">
-				<span class="branding">En desarrollo por</span> 
+				<span class="branding">Forjado artesanalmente por</span> 
 				<a href="http://gobiernofacil.com/" class="gobiernofacil">Gobierno Fácil</a>
 				<p> © 2014 -2015</p>
 			</div>
-			
+			<div class="col-sm-3 col-sm-offset-4">
+				<span class="branding">Este sitio usa herramientas del</span> 
+				<a href="http://surrealista.mx/" class="pato">Partido Surrealista</a>
+			</div>
 		</div>
 	</div>
 </footer>

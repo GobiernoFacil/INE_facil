@@ -847,13 +847,80 @@ div.brand {
 /* =header
 -------------------------------------------------------------- */
 
+/* home
+-------------------------------------------------------------- */
+.home {
+  background: #FF3B77;
+  padding: 100px 0 130px; }
+  .home h2 {
+    color: white;
+    font: 300 159px 'Josefin Slab';
+    text-align: center; }
+    .home h2 span {
+      display: block;
+      font-size: 100px; }
+  .home .links {
+    margin: 66px 0 20px; }
+    .home .links a {
+      border: 1px solid white;
+      color: white;
+      display: block;
+      min-height: 90px;
+      padding: 20px 10px;
+      text-align: center; }
+
+/* Bounce To Right */
+.hvr-bounce-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #3A3838;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  color: white; }
+
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
+
 /* =Footer
 -------------------------------------------------------------- */
 footer {
   padding: 15px 0 20px; }
 
 .the_end {
-  background: #23272d;
+  background: #3A3838;
   margin: 0;
   padding: 70px 0; }
   .the_end .branding {
@@ -877,6 +944,11 @@ footer {
     background-size: auto 40px;
     height: 40px;
     width: 250px; }
+  .the_end .pato {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNEOTFDNUMiIGQ9Ik02OS4xMTEsMjMuMDI1YzAsMC0zLjczMS03LjE4OC05LjE2Ny03Ljk4N2MtNS40MTUtMC43OTktMTQuNDk0LDAuNTE4LTE5LjczNiw0Ljk3OA0KCWMtNS4yNDIsNC40NDMtNS42MTEsMTYuODA3LTIuMzEsMTkuNTU4YzMuMjgsMi43NTYsMy40Nyw0LjM2NiwyLjUsNS4xNzZjLTAuOTg0LDAuNzgyLTMuMjE5LDMuODE0LTE0LjE2NC0yLjE1DQoJYy0xMC45Mi01Ljk1OS0xMy41MDgtOC4wOTgtMTUuNTQ0LTIuNjY4Yy0yLjA1Niw1LjQzLTEuMzM3LDQxLjcxNiwyOC42MzYsNDQuNzMyYzI5Ljk1NiwzLjAzMSwzOC45NzktMTQuOTQ5LDMxLjc0Mi0yOC42MzcNCgljLTQuMzcxLTguMjU3LTguMjc0LTkuMzIxLTUuMzMtMTUuNDc4YzAsMCwzLjE2MywwLjczMyw2LjAwMy0yLjQ2NGMyLjg1LTMuMTg2LDguNzM3LTAuODIxLDExLjY4MS0xLjYxNQ0KCWMyLjk0Mi0wLjgyMSw2Ljc2OS0xLjk2OCw1Ljc5My01LjdsMC43MTctMC44OTNjMCwwLDAuMTY1LTEuNDE3LTAuMDE3LTIuNDhjLTAuMTY1LTEuMDctMS40MjItMi4wNDUtMi40OTEtMS44NjkNCgljLTEuMDYsMC4xNzYtNi40ODIsMi4wMzQtOS45NTYsMS4zMzRjLTMuNDYxLTAuNzE3LTYuMTM1LTMuNzMyLTcuMzgtMy40NzNDNzAuMDg4LDIzLjM4OSw2OC45MzYsMjMuNzQyLDY5LjExMSwyMy4wMjV6Ii8+DQo8L3N2Zz4NCg==') no-repeat 0;
+    padding-left: 30px;
+    background-size: auto 25px;
+    display: inline-block; }
 
 /* =Media queries
 -------------------------------------------------------------- */

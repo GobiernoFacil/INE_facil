@@ -24,10 +24,12 @@
 	<header class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<h2>INE Fácil</h2>
+					<h1>Elecciones <strong>2015</strong></h1>
+				</div>
+				<div class="col-sm-6">
 					<div id="countdown"></div>
-
 				</div>
 				
 			</div>
