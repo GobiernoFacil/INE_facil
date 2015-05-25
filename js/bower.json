@@ -1,0 +1,29 @@
+{
+  "name": "ine",
+  "version": "1.0.0",
+  "homepage": "https://github.com/GobiernoFacil/INE_facil",
+  "authors": [
+    "Gobierno fácil <howdy@gobiernofacil.com>"
+  ],
+  "description": "the libraries for the ine project",
+  "main": "main.js",
+  "keywords": [
+    "ine",
+    "backbone",
+    "require"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
+    "requirejs": "~2.1.15",
+    "text": "~2.0.12",
+    "jquery.countdown": "~2.0.4",
+    "gsap": "~1.15.0"
+  }
+}
