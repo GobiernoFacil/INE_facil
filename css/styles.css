@@ -4,7 +4,7 @@ Author URI: http://hugoosorio.com/
 Version: 2.0
 */
 html {
-  background: #e6e7e9;
+  background: #fff;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   min-height: 100%;
@@ -62,7 +62,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline; }
 
 h1, h2, h3, h4, h5, .cta, blockquote.feature, #access, #insidenav, #pagination, .bloglist .more, blockquote {
-  font-family: "soberana", sans-serif;
+  font-family: 'soberana', sans-serif;
   font-weight: 500; }
 
 /* = HEADINGS */
@@ -116,7 +116,7 @@ h6 {
 /* = TEXT */
 p, ul, ol, dl, table, form {
   /* 13px */
-  font-family: "soberana", sans-serif;
+  font-family: 'soberana', sans-serif;
   font-size: 16px;
   margin: 0 0 1.5em 0; }
 
@@ -124,7 +124,7 @@ p, ul, ol, dl, table, form {
 a, a:link {
   color: #302d2e;
   background-color: transparent;
-  font-family: "soberana", sans-serif;
+  font-family: 'soberana', sans-serif;
   text-decoration: none; }
 
 .alt a, .alt a:link {
@@ -178,6 +178,62 @@ input[type="search"]::-webkit-search-decoration {
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
+
+@font-face {
+  font-family: 'soberana';
+  src: url('fonts/SoberanaSans-Light-webfont.eot');
+  src: url('fonts/SoberanaSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SoberanaSans-Light-webfont.woff2') format('woff2'), url('fonts/SoberanaSans-Light-webfont.woff') format('woff'), url('fonts/SoberanaSans-Light-webfont.ttf') format('truetype'), url('fonts/SoberanaSans-Light-webfont.svg#soberana_sanslight') format('svg');
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'soberana';
+  src: url('fonts/SoberanaSans-LightItalic-webfont.eot');
+  src: url('fonts/SoberanaSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SoberanaSans-LightItalic-webfont.woff2') format('woff2'), url('fonts/SoberanaSans-LightItalic-webfont.woff') format('woff'), url('fonts/SoberanaSans-LightItalic-webfont.ttf') format('truetype'), url('fonts/SoberanaSans-LightItalic-webfont.svg#soberana_sanslight_italic') format('svg');
+  font-weight: 300;
+  font-style: oblique; }
+
+@font-face {
+  font-family: 'soberana';
+  src: url('fonts/SoberanaSans-Regular-webfont.eot');
+  src: url('fonts/SoberanaSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SoberanaSans-Regular-webfont.woff2') format('woff2'), url('fonts/SoberanaSans-Regular-webfont.woff') format('woff'), url('fonts/SoberanaSans-Regular-webfont.ttf') format('truetype'), url('fonts/SoberanaSans-Regular-webfont.svg#soberana_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'soberana';
+  src: url('fonts/SoberanaSans-Italic-webfont.eot');
+  src: url('fonts/SoberanaSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SoberanaSans-Italic-webfont.woff2') format('woff2'), url('fonts/SoberanaSans-Italic-webfont.woff') format('woff'), url('fonts/SoberanaSans-Italic-webfont.ttf') format('truetype'), url('fonts/SoberanaSans-Italic-webfont.svg#soberana_sansitalic') format('svg');
+  font-weight: normal;
+  font-style: oblique; }
+
+@font-face {
+  font-family: 'soberana_sans_lightbold';
+  src: url('SoberanaSans-Bold-webfont.eot');
+  src: url('SoberanaSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('SoberanaSans-Bold-webfont.woff2') format('woff2'), url('SoberanaSans-Bold-webfont.woff') format('woff'), url('SoberanaSans-Bold-webfont.ttf') format('truetype'), url('SoberanaSans-Bold-webfont.svg#soberana_sans_lightbold') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'soberana_sans_lightBdIt';
+  src: url('SoberanaSans-BoldItalic-webfont.eot');
+  src: url('SoberanaSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('SoberanaSans-BoldItalic-webfont.woff2') format('woff2'), url('SoberanaSans-BoldItalic-webfont.woff') format('woff'), url('SoberanaSans-BoldItalic-webfont.ttf') format('truetype'), url('SoberanaSans-BoldItalic-webfont.svg#soberana_sans_lightBdIt') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'soberana';
+  src: url('fonts/SoberanaSans-Black-webfont.eot');
+  src: url('fonts/SoberanaSans-Black-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SoberanaSans-Black-webfont.woff2') format('woff2'), url('fonts/SoberanaSans-Black-webfont.woff') format('woff'), url('fonts/SoberanaSans-Black-webfont.ttf') format('truetype'), url('fonts/SoberanaSans-Black-webfont.svg#soberana_sansbold') format('svg');
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'soberana';
+  src: url('fonts/SoberanaSans-BoldItalic-webfont.eot');
+  src: url('fonts/SoberanaSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SoberanaSans-BoldItalic-webfont.woff2') format('woff2'), url('fonts/SoberanaSans-BoldItalic-webfont.woff') format('woff'), url('fonts/SoberanaSans-BoldItalic-webfont.ttf') format('truetype'), url('fonts/SoberanaSans-BoldItalic-webfont.svg#soberana_sans_lightBdIt') format('svg');
+  font-weight: 700;
+  font-style: oblique; }
 
 .wrapper, .wrap {
   width: 90%;
@@ -761,7 +817,7 @@ div.brand {
     display: inline-block;
     margin-right: 5px;
     padding-top: 5px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "soberana", Helvetica, Arial, sans-serif;
     font-size: 11px;
     font-style: oblique;
     vertical-align: top; }
@@ -804,7 +860,7 @@ footer {
     color: white;
     display: block;
     padding-bottom: 8px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "soberana", Helvetica, Arial, sans-serif;
     font-size: 12px;
     vertical-align: top; }
   .the_end p, .the_end a:link, .the_end a:visited {
