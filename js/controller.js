@@ -55,7 +55,7 @@ define(function(require){
       var election_day  = timer_ends;
 
       if(election_day.getTime() > today.getTime()){
-        // timer_ends is defined outisde backbone (index.php)
+        // timer_ends is defined outisde backbone (/templates/footer.php)
         $('#countdown').countdown(timer_ends, function(e){
           $(this).html(e.strftime(Countdown));
         });
