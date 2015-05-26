@@ -1,12 +1,27 @@
 <!doctype html>
+<!--
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::	
+.oPYo.        8       o                              ooooo     .o         o 8 
+8    8        8                                      8                      8 
+8      .oPYo. 8oPYo. o8 .oPYo. oPYo. odYo. .oPYo.   o8oo   .oPYo. .oPYo. o8 8 
+8   oo 8    8 8    8  8 8oooo8 8  `' 8' `8 8    8    8     .oooo8 8    '  8 8 
+8    8 8    8 8    8  8 8.     8     8   8 8    8    8     8    8 8    .  8 8 
+`YooP8 `YooP' `YooP'  8 `Yooo' 8     8   8 `YooP'    8     `YooP8 `YooP'  8 8 
+:....8 :.....::.....::..:.....:..::::..::..:.....::::..:::::.....::.....::....
+:::::8 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::..:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+-->
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>INE Fácil, Elecciones 2015</title>
-	<meta name="description" content="INE Fácil, Elecciones 2015." />
+	<title><?php echo !$title ? "" :  $title ;?></title>
+    <meta name="description" content="<?php echo !$description ? "" :  $description ;?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700,400italic' rel='stylesheet' type='text/css'></head>
+	<link rel="stylesheet" href="css/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700,400italic' rel='stylesheet' type='text/css'></head>
 
 <body>
 <div class="brand">

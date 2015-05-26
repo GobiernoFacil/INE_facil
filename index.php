@@ -1,4 +1,8 @@
-<?php	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
+<?php	
+	$body_class 	= "el_home";
+	$title 			= "INE Fácil, Elecciones Federales 2015";
+	$description 	= "Conoce los candidatos de tu distrito y encuentra tu casilla para votar en las Elecciones Federales 2015.";
+	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 
 <section class="home">	
 	<div class="container">
