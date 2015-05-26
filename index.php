@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Junio <strong>7</strong> <span><strong>8</strong>am - <strong>6</strong>pm</span></h2>
+				<h2>Junio <strong>7</strong> <span>8am - 6pm</span></h2>
 			</div>
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row links">
@@ -12,7 +12,7 @@
 						<a class="hvr-bounce-to-right" href="/candidatos.php">Candidatos por distrito</a>
 					</div>
 					<div class="col-md-4">
-						<a class="hvr-bounce-to-right" href="/casillas.php">Ubica tu casilla</a>
+						<a class="hvr-bounce-to-right" href="/casillas.php">Encuentra tu casilla</a>
 					</div>
 				</div>
 			</div>

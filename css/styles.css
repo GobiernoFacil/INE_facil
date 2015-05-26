@@ -846,6 +846,30 @@ div.brand {
 
 /* =header
 -------------------------------------------------------------- */
+header.main {
+  padding-bottom: 40px; }
+  header.main h1 {
+    color: #3A3838;
+    font-size: 42px;
+    font-weight: 300; }
+    header.main h1 strong {
+      color: #FF3B77; }
+  header.main h2 {
+    color: #FF3B77;
+    font-size: 24px; }
+    header.main h2 strong {
+      color: #3A3838; }
+
+#countdown p {
+  font-size: 16px;
+  padding-top: 59px;
+  margin-bottom: 0;
+  color: #808080;
+  text-align: right; }
+  #countdown p .number {
+    color: black;
+    font-size: 18px;
+    font-weight: 700; }
 
 /* home
 -------------------------------------------------------------- */
@@ -854,20 +878,25 @@ div.brand {
   padding: 100px 0 130px; }
   .home h2 {
     color: white;
-    font: 300 159px 'Josefin Slab';
+    font: 500 159px 'Josefin Slab';
     text-align: center; }
     .home h2 span {
       display: block;
-      font-size: 100px; }
+      font: 300 80px 'Josefin Slab'; }
   .home .links {
     margin: 66px 0 20px; }
     .home .links a {
-      border: 1px solid white;
+      background: #3A3838;
+      border: 1px solid #FF3B77;
       color: white;
+      font-weight: 500;
       display: block;
       min-height: 90px;
-      padding: 20px 10px;
-      text-align: center; }
+      padding: 20px 30px;
+      text-align: center;
+      text-transform: uppercase; }
+      .home .links a:hover {
+        border: 1px solid white; }
 
 /* Bounce To Right */
 .hvr-bounce-to-right {
@@ -893,7 +922,7 @@ div.brand {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #3A3838;
+  background: #FF3B77;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -952,11 +981,42 @@ footer {
 
 /* =Media queries
 -------------------------------------------------------------- */
-@media screen and (min-width: 480px) and (max-width: 991px) { }
+@media screen and (max-width: 480px) {
+  .tool {
+    display: none; }
+  div.brand .right {
+    text-align: center; }
+  .gobiernofacil {
+    width: 157px; }
+  header.main, #countdown p {
+    text-align: center; }
+  #countdown p {
+    padding: 10px 0 0;
+    font-size: 14px; }
+  .home {
+    padding: 70px 0 80px; }
+    .home h2 {
+      font-size: 80px; }
+      .home h2 span {
+        font-size: 40px; }
+    .home .links a {
+      min-height: 40px; }
+  .the_end, .the_end .right {
+    text-align: center; } }
 
-@media screen and (max-width: 480px) { }
-
-@media screen and (min-width: 481px) and (max-width: 767px) { }
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .tool {
+    display: none; }
+  div.brand .right {
+    text-align: center; }
+  .gobiernofacil {
+    width: 157px; }
+  header.main, #countdown p {
+    text-align: center; }
+  #countdown p {
+    padding: 10px 0 0; }
+  .the_end, .the_end .right {
+    text-align: center; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) { }
 
