@@ -25,9 +25,9 @@ require.config({
   }
 });
 
- var app;
+ var app_ine;
 
 require(['controller'], function(controller){ 
   //var app;
-  app = new controller();
+  app_ine = new controller();
 });
