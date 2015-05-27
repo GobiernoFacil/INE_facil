@@ -958,7 +958,9 @@ section.container {
         border-bottom: 1px solid #ccc;
         cursor: pointer; }
         .diputables li div:hover figure {
-          background: #FF3B77; }
+          background: #FF3B77;
+          -webkit-transition: background 450ms ease-out 0ms;
+          transition: background 450ms ease-out 0ms; }
           .diputables li div:hover figure img {
             -webkit-opacity: 0.2;
             -moz-opacity: 0.2;
@@ -986,17 +988,25 @@ section.container {
     height: 200px;
     position: relative;
     overflow: hidden;
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: background 450ms ease-out 0ms;
+    transition: background 450ms ease-out 0ms; }
     .diputables figure img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      -webkit-transition: all 450ms ease-out 0ms;
+      transition: all 450ms ease-out 0ms; }
     .diputables figure a {
       opacity: 0;
       color: #fff;
       position: absolute;
-      height: 30px;
       display: block;
       z-index: 2;
+      border: 1px solid white;
+      padding: 10px 9px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
       top: 50%;
       left: 50%;
       -webkit-transform-origin: top left;
