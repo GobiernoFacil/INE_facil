@@ -11,7 +11,7 @@
 			<div class="col-md-12">	
 				<h2>01. Busca el distrito</h2>
 				<p class="lead">Para conocer tus candidatos busca primero tu distrito</p>
-
+				<p><a class="location">ubícate chavo</a></p>
 				<!-- [ el selector de distrito ]  -->
 				<!-- Esta información se carga de un para de CSVs -->
 				<section id="district-selector-container">
