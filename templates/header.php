@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700,400italic' rel='stylesheet' type='text/css'></head>
 
-<body>
+<body <?php echo !$body_class ? "" : 'class="' . $body_class .'"';?>>
 <div class="brand">
 		<div class="row">
 			<div class="col-sm-3">

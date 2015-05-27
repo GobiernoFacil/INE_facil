@@ -7,10 +7,10 @@
 	<div class="row">		
 		<!-- Inica la conlaboración con don pato. -->
 		<div id="main">
-			<div class="divider" data-text="Candidatos"></div>
-			<div class="col-md-4">	
+			<div class="divider" data-text="Candidatos y Casillas"></div>
+			<div class="col-md-12">	
 				<h2>01. Busca el distrito</h2>
-				<p>Para conocer tus candidatos busca primero tu distrito</p>
+				<p class="lead">Para conocer tus candidatos busca primero tu distrito</p>
 
 				<!-- [ el selector de distrito ]  -->
 				<!-- Esta información se carga de un para de CSVs -->
@@ -25,18 +25,15 @@
 				      <select name="city"></select>
 				    </p>
 				  </form>
+				  
+				  <!-- el mapa del distrito -->
+				  <div id="district-map-container">
+				  	<div class="map" style="width:100%; height:150px;"></div>
+				  </div>
 				</section>
-
-				<!-- el mapa del distrito -->
-				<section id="district-map-container">
-				  <div class="map" style="border:1px solid red; width:300px; height:300px;"></div>
-				</section>
-
 			</div>
 
-			<div class="col-md-8">
-				<p>Encuentra tu candidato</p>
-			</div>		
+			
 			
 			<div class="col-md-12">
   <!-- los candidatos a mantenidos del distrito -->
