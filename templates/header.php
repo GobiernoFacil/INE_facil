@@ -44,7 +44,10 @@
 					<h1>Elecciones <strong>2015</strong></h1>
 				</div>
 				<div class="col-sm-5">
-					<div id="countdown"></div>
+					<?php if ($body_class != 'el_home'):?>
+					<p class="date">Domingo 7 de junio</p>
+					<?php endif;?>
+					<div id="countdown" <?php echo $body_class != 'el_home' ? "" : 'class="wo_date"';?>></div>
 				</div>
 				
 			</div>

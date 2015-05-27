@@ -844,6 +844,9 @@ div.brand {
   width: 200px;
   height: 25px; }
 
+.hide {
+  display: none; }
+
 /* =header
 -------------------------------------------------------------- */
 header.main {
@@ -859,10 +862,18 @@ header.main {
     font-size: 24px; }
     header.main h2 strong {
       color: #3A3838; }
+  header.main .date {
+    color: #FF3B77;
+    font-size: 21px;
+    padding-top: 19px;
+    text-align: right;
+    margin-bottom: 10px; }
 
+#countdown.wo_date {
+  padding-top: 59px; }
 #countdown p {
   font-size: 16px;
-  padding-top: 59px;
+  padding-top: 0;
   margin-bottom: 0;
   color: #808080;
   text-align: right; }
@@ -870,6 +881,8 @@ header.main {
     color: black;
     font-size: 18px;
     font-weight: 700; }
+    #countdown p .number strong {
+      color: #FF3B77; }
 
 /* home
 -------------------------------------------------------------- */
