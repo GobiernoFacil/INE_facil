@@ -13,6 +13,10 @@
 		</div>
 	</div>
 </footer>
+
+<?php //modal 
+	if ($body_class == 'candidatos') { include $_SERVER['DOCUMENT_ROOT']."/templates/modal.php";} ?>
+
  <script>
     /**
     *

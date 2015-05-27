@@ -1049,6 +1049,106 @@ section.container {
   .diputables .social.democrata {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEREM5RTVEQUIwODcxMUU0OURFMEQ5QjI3ODY0NTJCNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEREM5RTVEQkIwODcxMUU0OURFMEQ5QjI3ODY0NTJCNSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkREQzlFNUQ4QjA4NzExRTQ5REUwRDlCMjc4NjQ1MkI1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkREQzlFNUQ5QjA4NzExRTQ5REUwRDlCMjc4NjQ1MkI1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+flqbPQAABbZJREFUeNq0VmtsFFUUvo+5s7PdDtsXlL4k1YIoWAGJgsSCIBijIJRGiNAQQ4MJGohvgYiGmPjDGIKEH2AoVRKKAsEXSGultpJAjEAKkiqoKNvy6m6hu93t7OzMvZ473VfLxh+Km9m9d87de97fOQefLS3loRC6rR+BkKLrSqyrK530Hz84wUf09Sl0xAg7GASS7TzkHwXgoafpr4N7JfEKbOP7GEKe8vKy+p22ZYlALyI4Ll2uAgvY4hQDAW/wELnCu8Cw4BwvtoRvRa3h99N0MaBv1rRp+oTJvevX4eISbMMlYMMdRgRLWyxpEna42JIxCCSIY0kEkYIHejwvrKaV9/GjrdThqSTNwZrav+Mj69c/cl55GVl2wlb4JdjtRpiLiCH/GHenXEBvqbTckPC27f31u7HKcNxanHQOAldgRtX7J6jjx/6LALKHphi//IZidsJtYFMyPTgXispNK/3CwNHvoxcv9O36uGvceI5Q5OCXkZaWjKx5f0QoQ8KcYk3ARmBvJ1gLYbS1R462X62aLUxD8Xp7HpwZ3rv/yty5xonjmXiDe+hg/AfDn2INWy7jkdI6/NnBSEO9d2lt9JN97OlFtLBAW7ggp25NtKlVJlXn+dDOHVbvjVTygXIcZdAaQi6jnqRgnL9ts3vGwxBb5YFK74pa/b1NA7vq2dQJpGR05MDBq/feE6hbzcMDcSMpcLaEyJDj4HbpEZpuB0IFn+65uWlT8P0PiaYo5WO1WVVqZWXszJnrNdUmQkWN+9Sy4iSUISsI5hm0FtwRRMkwH+Zs3FjY1mJ0nDUOfc2ZZrS0R1uPaVOnj97RoC+tSTNaRkvglK9TWgNRRGJC12+NkGvKpKKmb6R/uy+LUD996UWanTXsP0rhSNPXJdLqQJpDBKJ3lQe37+gNBIRtYSGjAl8QCcjgKkMenWoaYoTHLBGOiHBYcLgkEUsotc+ec61cgU7iQVfwYVpj06S6ziZPJMVFOJGt3O8HcLL8fFyQJ+N82WcD9ItGQzZgrIi+XrvHjxkzAn4QGb8FCEpnDcyhwGqLFuhr11jdVwS3CRdkTBlOwqf9B8Ro1uKF8rLvEiIKN2NK+Zh4qbvjTuOnUwCMDA4B44lLxYAZf8BXWpwAFs79YEt29cKrsx+3e67x/l51fo3niXnB1auEU9Qoc+c17NKfXSJ6erCLYSeMg3eHQsYStqxkFM606VVF5zqz7p4Yeu3Na4uX2Bc7vevWj2zcm7t2FcnNG0CELV6ev3s3ihmBZctE1KSlRYKQwbI1PPmACsVKgt2BJWUuhTKEGcRKqSiH8xsbXg2te4v/2Y3NAYa4e+I47/Ll7mV1FrJj5y9g3YO4LTF3a+VzsoFQWGxBXfnRkx2+8RVAzt3wTs67b4fmz4+2tZnNrYG659xznoQoYUXetW/0SD2ZAnrJgiuSDhFpySebGJfJRrkdDZDsooKGA66KcnXS5IFDTZH9ezwrn4+d6hCXMC4cJaPauM/88XT08Oeu3GI2tsL4+ZzAQ+CmJBsucaTxmE0pY8WlrmmP6DXVCcy4zGOnI188pWTnFH51GGXr1onjxDCjzc3qjKq8LZsx5PU1f7yxDUOj06wwJFOsLwgds6zbly7f/disMr+P9/pJXkGc8nvn8I5ckId8PowyoZG4NFpWamzd2petIc3NbdO+GZLJJBXBOMtDCkbhaL99PcCJomS5ZdGhjMZMFDWEiw0caVKrn0GqlqHyxf66mFW7lHo067qfMwouZyVO1ZHF1unqlCLLRbx5mKkEWhJ3KAAtkG9z/fU32Lw5VxrrU+NDhzOHCCfi+qMzaWkJN6KyURMFCizHTq0cHAcQlBbEie3kkdPlsYhxAgiEQ+pWxeWu8JFm4ZQoNsKrJNObW1bg2+9EYgJKRkOkTTA4bchKHpE0IksMSTL5QOUkF/U2DXwy34NBhf0P46Q0Rdf/FmAAiyGhz2tHbd4AAAAASUVORK5CYII='); }
 
+/* =Modal
+-------------------------------------------------------------- */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 630px;
+  min-width: 320px;
+  height: auto;
+  z-index: 9999999;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+.ine-show {
+  visibility: visible; }
+
+.ine-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 8888888;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8); }
+
+.ine-show ~ .ine-overlay {
+  opacity: 1;
+  visibility: visible; }
+
+.close_modal {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjYuODcxcHgiIGhlaWdodD0iMjYuODcxcHgiIHZpZXdCb3g9IjAgMCAyNi44NzEgMjYuODcxIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNi44NzEgMjYuODcxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiM1QTVCNjYiIGQ9Ik0yLjgyOSwwbDI0LjA0MiwyNC4wNDNsLTIuODI4LDIuODI4TDAsMi44MjlMMi44MjksMHoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiM1QTVCNjYiIGQ9Ik0yNi44NzEsMi44MjlMMi44MjgsMjYuODcxTDAsMjQuMDQzTDI0LjA0MSwwTDI2Ljg3MSwyLjgyOXoiLz4NCjwvZz4NCjwvc3ZnPg0K') no-repeat 50%;
+  background-size: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  width: 34px;
+  top: 0;
+  z-index: 9; }
+  .close_modal:hover {
+    border-color: rgba(255, 255, 255, 0.6); }
+
+.md-content {
+  color: #4a4a49;
+  background: #fff;
+  position: relative;
+  min-height: 269px;
+  margin: 0 auto;
+  width: 564px;
+  text-align: center;
+  padding-bottom: 28px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0; }
+  .md-content h3 {
+    background: #2b0201;
+    color: #fff;
+    margin-bottom: 13px;
+    line-height: 88px; }
+  .md-content h4 {
+    color: #181818;
+    margin: 20px 0 0; }
+  .md-content p {
+    margin: 20px auto 29px;
+    width: 80%; }
+    .md-content p.note {
+      font-size: 10px;
+      margin: 27px auto 0; }
+
+/* Effect Slide from the bottom */
+.effect .md-content {
+  -webkit-transform: translateY(20%);
+  -moz-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  transform: translateY(20%);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.effect.ine-show .md-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1; }
+
 /* Bounce To Right */
 .hvr-bounce-to-right {
   display: inline-block;
