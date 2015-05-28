@@ -4,7 +4,7 @@
 	$description 	= "Conoce los candidatos de tu distrito.";
 	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 	<!-- THE HTML TEMPLATES -->
-  <script id="template-candidate" type="text/x-handlebars-template">
+	<script id="template-candidate" type="text/x-handlebars-template">
     <li class="col-xs-4 col-sm-3">
       <div data-index="{{_index}}">
         <figure><img src="{{foto}}"></img>
@@ -14,7 +14,10 @@
         <p class="partidin {{#each partidos}} {{this}} {{/each}}">{{partidos}}</p>
       </div>
     </li>
-  </script>
+	</script>
+	<script id="template-location" type="text/x-handlebars-template">
+    	<p><span class="label">{{cargo}}:</span> {{nombre}} {{apellidos}} </p>
+	</script>
 <section class="container">
 	<div class="row">		
 		<!-- Inica la conlaboración con don pato. -->
@@ -40,7 +43,7 @@
 				  
 				  <!-- el mapa del distrito -->
 				  <div id="district-map-container">
-				  	<div class="map" style="width:100%; height:150px;"></div>
+				  	<div class="map" style="width:100%; height:300px;"></div>
 				  </div>
 				</section>
 			</div>
@@ -48,35 +51,35 @@
 			
 			
 			<div class="col-md-12">
-  <!-- los candidatos a mantenidos del distrito -->
-  <section id="district-candidates-container">
-	  <h2>02. Conoce los candidatos</h2>
-	  <p>Estos son los candidatos del distrito</p>
-	  <ul class="row diputables"></ul>
-  </section>
-
-
-
-
-
-  <!-- la información del distrito -->
-  <section id="district-data-container"></section>
-
-  <!-- la información de las ciudades del distrito -->
-  <section id="cities-data-container"></section>
-
-  <!-- la sección de la radiografía electoral del distrito -->
-  <section id="election-data-container"></section>
-
-  <!-- el mapa de las casillas -->
-  <section id="city-map-container"></section>
-
-  <!-- la información de la casilla seleccionada -->
-  <section id="locations-map-container"></section>
-
-</div>
-
-		</div>	<!-- ends col-8-->
+				<!-- los candidatos a mantenidos del distrito -->
+				<section id="district-candidates-container">
+				    <h2>02. Conoce los candidatos</h2>
+				    <p>Estos son los candidatos del distrito</p>
+				    <ul class="row diputables"></ul>
+				</section>
+				<!-- la información del distrito -->
+				<section id="district-data-container"></section>
+				
+				<!-- la información de las ciudades del distrito -->
+				<section id="cities-data-container"></section>
+				
+				<!-- la sección de la radiografía electoral del distrito -->
+				<section id="election-data-container"></section>
+								
+				<!-- la información de la casilla seleccionada -->
+				<section class="casilla">
+					 <h2>03. Ubica tu casilla</h2>
+					 <!-- el mapa de las casillas -->
+					 <div id="city-map-container">
+					 	<div class="map" style="width:100%; height:300px;"></div>
+					 </div>
+					 <!-- la información de la casilla seleccionada -->
+					 <div class="row las_casillas">
+					 	<div id="locations-map-container"></div>
+					 </div>
+				</section>
+			</div>
+		</div>	<!-- ends main-->
 	</div><!-- ends row-->
 </section><!-- ends container-->
 <?php	include $_SERVER['DOCUMENT_ROOT']."/templates/footer.php";?>
