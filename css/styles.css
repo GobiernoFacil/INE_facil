@@ -956,47 +956,50 @@ p i.electos {
   background-size: 100%;
   margin-bottom: 3px; }
 
-.se_gasta h2 {
-  font: 500 65px 'Josefin Slab';
-  padding-bottom: 20px; }
-.se_gasta p {
-  text-align: center;
-  color: white; }
-.se_gasta .lead {
-  color: black;
-  font: 300 60px 'Josefin Slab'; }
-.se_gasta .lana {
-  color: white;
-  line-height: 50px;
-  text-align: right;
-  margin-bottom: 0; }
-.se_gasta .labels {
-  font-size: 13px; }
-  .se_gasta .labels .perma, .se_gasta .labels .gastos, .se_gasta .labels .espec {
-    background: #ccc;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    margin-right: 5px; }
-  .se_gasta .labels .gastos {
-    background: #777; }
-  .se_gasta .labels .espec {
-    background: black; }
-  .se_gasta .labels span {
-    margin-left: 25px;
-    display: inline-block; }
-.se_gasta .links {
-  margin-top: 95px; }
+.se_gasta {
+  background: #f2f2f2; }
+  .se_gasta h2 {
+    color: #3A3838;
+    font: 500 65px 'Josefin Slab';
+    padding-bottom: 20px; }
+  .se_gasta p {
+    text-align: center; }
+  .se_gasta .lead {
+    color: black;
+    font: 300 60px 'Josefin Slab'; }
+  .se_gasta .lana {
+    line-height: 50px;
+    text-align: right;
+    margin-bottom: 0; }
+  .se_gasta .labels {
+    font-size: 13px; }
+    .se_gasta .labels .perma, .se_gasta .labels .gastos, .se_gasta .labels .espec {
+      background: #777;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin-right: 5px; }
+    .se_gasta .labels .gastos {
+      background: #FF3B77; }
+    .se_gasta .labels .espec {
+      background: black; }
+    .se_gasta .labels span {
+      margin-left: 25px;
+      display: inline-block; }
+  .se_gasta .links {
+    margin-top: 95px; }
+    .se_gasta .links a, .se_gasta .links a:hover {
+      border: 0; }
 
 .permanentes, .campaign, .especificas {
   height: 50px; }
 
 .permanentes {
-  background: #ccc;
+  background: #777;
   width: 100%; }
 
 .campaign {
-  background: #777;
+  background: #FF3B77;
   width: 29%; }
 
 .especificas {
