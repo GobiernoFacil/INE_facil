@@ -1,5 +1,5 @@
 <!-- diputables info -->
-<div id="diputable_info" class="modal effect ine-show">
+<div id="diputable_info" class="modal effect">
 	<div class="close_modal"></div>
 	<div class="md-content">
 		<div class="row">
