@@ -237,19 +237,24 @@ var APP = function(){
 
       console.log(address);
       // se comienza a generar el HTML para la sección de funcionarios de casilla
-      html = "<h3>" + address + "</h3>";
-      html += "<h4>" + first_element.referencia + "</h4>";
-
+      html = '<div class="col-sm-5"><h3 class="address">' + address + "</h3>";
+      html += "<h4>" + first_element.referencia + "</h4></div>";
+	  
+	  html += '<div class="col-sm-7">'
       // se genera el HTML para cada funcionario de casilla, y se agrega a la 
       // variable html
-      data.forEach(function(location){
-        html += "<div>";
+      data.forEach(function(location, i){
+	    i++;
+        html += '<div class="col-sm-6">';
+        html += '<h3>Funcionarios de casilla ' + i + '</h3>';
         location.funcionarios.forEach(function(funcionario){
           html += location_template(funcionario);
         });
         html+= "</div>";
       });
-
+	  
+	  html += "</div>";
+	  
       // se agrega el html al contenedor
       location_container.innerHTML = html;
 
