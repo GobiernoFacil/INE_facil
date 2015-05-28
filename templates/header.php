@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col-sm-7">
 					<h2><a href="/"><strong>INE</strong> Fácil</a></h2>
-					<h1>Elecciones <strong>2015</strong></h1>
+					<h1>Elecciones Federales <strong>2015</strong></h1>
 				</div>
 				<div class="col-sm-5">
 					<?php if ($body_class != 'el_home'):?>

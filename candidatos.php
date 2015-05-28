@@ -24,7 +24,7 @@
 		<div id="main">
 			<div class="divider" data-text="Candidatos y Casillas"></div>
 			<div class="col-md-12">	
-				<h2>01. Busca el distrito</h2>
+				<h2>01. Busca tu distrito</h2>
 				<p class="lead">Para conocer tus candidatos busca primero tu distrito</p>
 				<p><a class="location">ubícate chavo</a></p>
 				<!-- [ el selector de distrito ]  -->

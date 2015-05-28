@@ -18,11 +18,6 @@
 	if ($body_class == 'candidatos') { include $_SERVER['DOCUMENT_ROOT']."/templates/modal.php";} ?>
 
  <script>
-    /**
-    *
-    * THE CONFIGURATION FILES
-    */
-
     // the time counter ending
     //
     <?php
@@ -35,12 +30,15 @@
     var timer_ends  = new Date<?php echo $js_ends;   ?>;
     var timer_today = new Date<?php echo $js_starts; ?>;
  </script>
-
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="don_pato/js/bower_components/d3/d3.min.js"></script>
-<script src="don_pato/js/bower_components/handlebars/handlebars.min.js"></script>
-<script src="don_pato/js/main.js"></script>
-  <script data-main="/js/main" src="/js/bower_components/requirejs/require.js"></script>
+<?php
+	 //Candidatos template y scripts 
+	if ($body_class == 'candidatos'):?> 
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="don_pato/js/bower_components/d3/d3.min.js"></script>
+	<script src="don_pato/js/bower_components/handlebars/handlebars.min.js"></script>
+	<script src="don_pato/js/main.js"></script>
+<?php endif;?>
+	<script data-main="/js/main" src="/js/bower_components/requirejs/require.js"></script>
 
 </body>
 </html>

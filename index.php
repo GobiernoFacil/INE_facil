@@ -12,11 +12,10 @@
 			</div>
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row links">
-					<div class="col-md-4 col-md-offset-2">
-						<a class="hvr-bounce-to-right" href="/candidatos.php">Candidatos por distrito</a>
-					</div>
-					<div class="col-md-4">
-						<a class="hvr-bounce-to-right" href="/casillas.php">Encuentra tu casilla</a>
+					<div class="col-md-8 col-md-offset-2">
+						<a class="hvr-bounce-to-right" href="/candidatos.php">Conoce los Candidatos de tu distrito
+							y encuentra tu casilla <strong>&gt;</strong>
+						</a>
 					</div>
 				</div>
 			</div>
