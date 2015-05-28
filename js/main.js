@@ -34,6 +34,7 @@ var APP = function(){
       locations_map       = document.querySelector("#city-map-container .map"),
       candidate_container = document.querySelector("#district-candidates-container ul"),
       location_container  = document.querySelector("#locations-map-container"),
+      geolocation_btn     = document.querySelector("a.location"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -465,6 +466,7 @@ var APP = function(){
         zoom : 10
       };
       google_district_map = new google.maps.Map(district_map, mapOptions);
+      this.draw_polygon(google_district_map);
     },
 
     // [ SET THE MAP CENTER ]
@@ -484,6 +486,27 @@ var APP = function(){
       }
       district_map_center = [+city.lat, +city.lng];
     },
+
+    draw_polygon : function(map){
+      var coords = [];
+      current_polygon.forEach(function(point){
+        coords.push(new google.maps.LatLng(point[1], point[0]));
+      });
+
+      district_polygon = new google.maps.Polygon({
+        paths: coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: 0.35
+      });
+
+      console.log(coords, district_polygon, map);
+      district_polygon.setMap(map);
+    },
+
+    // current_polygon
 
     //
     // [ T H E   G O O G L E   L O C A T I O N S   M A P ]
@@ -520,6 +543,7 @@ var APP = function(){
   //
   state_selector.onchange = app.set_cities;
   city_selector.onchange  = app.set_district_map_center;
+  geolocation_btn.onclick = app.get_geolocation();
 
   //
   // [ R E T U R N   T H E   A P P ]
