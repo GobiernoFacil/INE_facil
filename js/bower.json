@@ -24,6 +24,9 @@
     "requirejs": "~2.1.15",
     "text": "~2.0.12",
     "jquery.countdown": "~2.0.4",
-    "gsap": "~1.15.0"
+    "gsap": "~1.15.0",
+    "countdownjs": "~2.5.2",
+    "d3": "~3.5.5",
+    "handlebars": "~3.0.3"
   }
 }
