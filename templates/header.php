@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-7">
-					<h2><strong>INE</strong> Fácil</h2>
+					<h2><a href="/"><strong>INE</strong> Fácil</a></h2>
 					<h1>Elecciones <strong>2015</strong></h1>
 				</div>
 				<div class="col-sm-5">
