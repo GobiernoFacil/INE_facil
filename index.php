@@ -22,4 +22,17 @@
 		</div>
 	</div>
 </section>
+<section class="se_vota">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>¿Qué se elige en las Elecciones Federales 2015?</h2>
+				<p>Se eligen los 500 diputados federales que integrarán la LXIII Legislatura del Congreso de la Unión</p>
+				<p>300 diputados serán electos por mayoría simple en cada uno de los distritos electorales en que se divide el país y los 200 	
+					restantes mediante el principio de representación proporcional.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php	include $_SERVER['DOCUMENT_ROOT']."/templates/footer.php";?>

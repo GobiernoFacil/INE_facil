@@ -886,19 +886,19 @@ header.main {
 
 /* home
 -------------------------------------------------------------- */
-.home {
+.home, .se_vota {
   background: #FF3B77;
   padding: 100px 0 130px; }
-  .home h2 {
+  .home h2, .se_vota h2 {
     color: white;
     font: 500 159px 'Josefin Slab';
     text-align: center; }
-    .home h2 span {
+    .home h2 span, .se_vota h2 span {
       display: block;
       font: 300 80px 'Josefin Slab'; }
-  .home .links {
+  .home .links, .se_vota .links {
     margin: 66px 0 20px; }
-    .home .links a {
+    .home .links a, .se_vota .links a {
       background: #3A3838;
       border: 1px solid #FF3B77;
       color: white;
@@ -908,8 +908,18 @@ header.main {
       padding: 20px 30px;
       text-align: center;
       text-transform: uppercase; }
-      .home .links a:hover {
+      .home .links a:hover, .se_vota .links a:hover {
         border: 1px solid white; }
+
+.se_vota {
+  background: white; }
+  .se_vota h2 {
+    color: #3A3838;
+    font: 500 70px 'Josefin Slab';
+    text-align: center; }
+    .se_vota h2 span {
+      display: block;
+      font: 300 80px 'Josefin Slab'; }
 
 /* sections
 -------------------------------------------------------------- */
