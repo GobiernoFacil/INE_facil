@@ -953,7 +953,7 @@ section.container {
     background-color: #3A3838; }
 
 .diputables {
-  padding-bottom: 120px; }
+  padding-bottom: 40px; }
   .diputables li {
     list-style: none;
     text-align: center;
@@ -1028,6 +1028,29 @@ section.container {
       transition: all 450ms ease-out 0ms; }
   .diputables .partidin {
     padding-top: 37px; }
+
+.las_casillas {
+  padding: 30px 0 60px; }
+  .las_casillas h3 {
+    border-bottom: 1px solid #777;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 300; }
+    .las_casillas h3.address {
+      border: 0;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 0; }
+  .las_casillas h4 {
+    color: #777;
+    font-size: 15px;
+    font-weight: 500; }
+  .las_casillas .label {
+    color: #a7a7a7;
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase; }
 
 /* =los partidos
 -------------------------------------------------------------- */
