@@ -38,6 +38,7 @@
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="don_pato/js/bower_components/d3/d3.min.js"></script>
+<script src="don_pato/js/bower_components/handlebars/handlebars.min.js"></script>
 <script src="don_pato/js/main.js"></script>
   <script data-main="/js/main" src="/js/bower_components/requirejs/require.js"></script>
 

@@ -976,7 +976,7 @@ section.container {
             opacity: 0.2;
             -webkit-transition: all 450ms ease-out 0ms;
             transition: all 450ms ease-out 0ms; }
-          .diputables li div:hover figure a {
+          .diputables li div:hover figure b {
             -webkit-transform: scale(1) translate(-50%, -50%);
             -ms-transform: scale(1) translate(-50%, -50%);
             transform: scale(1) translate(-50%, -50%);
@@ -1005,7 +1005,7 @@ section.container {
       height: auto;
       -webkit-transition: all 450ms ease-out 0ms;
       transition: all 450ms ease-out 0ms; }
-    .diputables figure a {
+    .diputables figure b {
       opacity: 0;
       color: #fff;
       position: absolute;

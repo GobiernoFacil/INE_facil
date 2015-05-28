@@ -3,6 +3,18 @@
 	$title 			= "Candidatos a Elecciones Federales 2015";
 	$description 	= "Conoce los candidatos de tu distrito.";
 	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
+	<!-- THE HTML TEMPLATES -->
+  <script id="template-candidate" type="text/x-handlebars-template">
+    <li class="col-xs-4 col-sm-3">
+      <div data-index="{{_index}}">
+        <figure><img src="{{foto}}"></img>
+        	<b>+ información</b>
+        </figure>
+        <h2>{{nombre}}</h2>
+        <p class="partidin {{#each partidos}} {{this}} {{/each}}">{{partidos}}</p>
+      </div>
+    </li>
+  </script>
 <section class="container">
 	<div class="row">		
 		<!-- Inica la conlaboración con don pato. -->
