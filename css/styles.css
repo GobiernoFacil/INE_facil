@@ -1147,6 +1147,9 @@ section.container {
     font-size: 12px;
     text-transform: uppercase; }
 
+.viz {
+  padding-bottom: 120px; }
+
 /* =los partidos
 -------------------------------------------------------------- */
 .partidin {

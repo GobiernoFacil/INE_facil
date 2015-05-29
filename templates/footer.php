@@ -17,14 +17,20 @@
 <?php //modal 
 	if ($body_class == 'candidatos') { include $_SERVER['DOCUMENT_ROOT']."/templates/modal.php";} ?>
 
-<?php if($body_class == "el_home"): ?>
-  <script src="/js/bower_components/countdownjs/countdown.min.js"></script>
-  <script src="/js/main.home.js"></script>
-<?php else: ?>
+<?php if($body_class == "candidatos"): ?>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="/js/bower_components/d3/d3.min.js"></script>
   <script src="/js/bower_components/handlebars/handlebars.min.js"></script>
   <script src="/js/main.js"></script>
+<?php else: ?>
+	<script src="/js/bower_components/countdownjs/countdown.min.js"></script>
+	<script src="/js/main.home.js"></script>
 <?php endif; ?>
+
+<?php if($body_class == "diputados"): ?>
+  <script src="/js/bower_components/d3/d3.min.js"></script>
+  <script src="/js/main.partidos.js"></script>
+<?php endif; ?>
+
 </body>
 </html>

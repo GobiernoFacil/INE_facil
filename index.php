@@ -41,9 +41,8 @@
 				</div>
 				<div class="col-md-8 col-md-offset-2">
 				<div class="links">
-						<a class="hvr-bounce-to-right" href="/diputados-federales.php">¿Cuántos Diputados federales se eligen estado por? 
-							¿Cuáles son las circunscripciones electorales 
-							de México? <strong>&gt;</strong>
+						<a class="hvr-bounce-to-right" href="/diputados-federales.php">¿Cuántos Diputados federales se eligen por estado? 
+							 <strong>&gt;</strong>
 						</a>
 				</div>
 			</div>
