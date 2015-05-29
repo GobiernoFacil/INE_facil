@@ -35,6 +35,9 @@ var APP = function(){
       candidate_container = document.querySelector("#district-candidates-container ul"),
       location_container  = document.querySelector("#locations-map-container"),
       geolocation_btn     = document.querySelector("a.location"),
+      modal_background    = document.querySelector("div.ine-overlay"),
+      modal_container     = document.querySelector("div.modal"),
+      modal               = document.querySelector("#diputable_info"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -62,6 +65,8 @@ var APP = function(){
       candidate_template = Handlebars.compile(candidate_source),
       location_source    = document.querySelector("#template-location").innerHTML,
       location_template  = Handlebars.compile(location_source),
+      candidate_full_src = document.querySelector("#template-candidate-modal").innerHTML,
+      candidate_full_tmp = Handlebars.compile(candidate_full_src),
       app;
 
   //
@@ -593,6 +598,22 @@ var APP = function(){
           console.log("fail fail fail");
         }
       });
+    },
+
+    set_modal : function(e){
+      // candidate_full_tmp
+      modal_background.style.visibility = "visible";
+      modal_background.style.opacity = 1;
+      modal_container.style.visibility = "visible";
+      modal_container.querySelector(".md-content").style.opacity = 1;
+      var candidate_id = e,
+          _candidate   = candidates_array[candidate_id],
+          html         = candidate_full_tmp(_candidate);
+      modal.innerHTML = html;
+    },
+
+    close_modal : function(){
+      
     }
   };
 
