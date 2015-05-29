@@ -31,6 +31,7 @@ var APP = function(){
       state_selector      = document.querySelector("#district-selector-container select[name='state']"),
       city_selector       = document.querySelector("#district-selector-container select[name='city']"),
       district_map_container = document.querySelector("#district-map-container"),
+      locations_map_container = document.querySelector("#city-map-container"),
       district_map        = document.querySelector("#district-map-container .map"),
       locations_map       = document.querySelector("#city-map-container .map"),
       candidate_container = document.querySelector("#district-candidates-container ul"),
@@ -552,6 +553,7 @@ var APP = function(){
     //
     initialize_locations_map : function(center){
       google_location_map = this._draw_map(center, 15, locations_map);
+      locations_map_container.className = "open";
     },
 
     // [ DRAW MAP ]

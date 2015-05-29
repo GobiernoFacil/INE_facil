@@ -43,7 +43,7 @@
 				  
 				  <!-- el mapa del distrito -->
 				  <div id="district-map-container">
-				  	<div class="map" style="width:100%; height:300px;"></div>
+				  	<div class="map"></div>
 				  </div>
 				</section>
 			</div>
@@ -71,7 +71,7 @@
 					 <h2>03. Ubica tu casilla</h2>
 					 <!-- el mapa de las casillas -->
 					 <div id="city-map-container">
-					 	<div class="map" style="width:100%; height:300px;"></div>
+					 	<div class="map"></div>
 					 </div>
 					 <!-- la información de la casilla seleccionada -->
 					 <div class="row las_casillas">

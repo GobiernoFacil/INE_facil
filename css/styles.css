@@ -1047,6 +1047,10 @@ section.container {
   .location:hover {
     background-color: #3A3838; }
 
+#district-map-container.open .map, #city-map-container.open .map {
+  height: 300px;
+  width: 100%; }
+
 .diputables {
   padding-bottom: 40px; }
   .diputables li {
