@@ -53,7 +53,7 @@
 			<div class="col-md-12">
 				<!-- los candidatos a mantenidos del distrito -->
 				<section id="district-candidates-container">
-				    <h2>02. Conoce los candidatos</h2>
+				    <h2>02. Conoce los candidatos del <strong>Distrito 12</strong>. <span>Puebla, Puebla</span></h2>
 				    <p>Estos son los candidatos del distrito</p>
 				    <ul class="row diputables"></ul>
 				</section>
