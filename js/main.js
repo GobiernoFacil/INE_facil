@@ -35,6 +35,10 @@ var APP = function(){
       candidate_container = document.querySelector("#district-candidates-container ul"),
       location_container  = document.querySelector("#locations-map-container"),
       geolocation_btn     = document.querySelector("a.location"),
+      modal_background    = document.querySelector("div.ine-overlay"),
+      modal_container     = document.querySelector("div.modal"),
+      modal               = document.querySelector("#diputable_info"),
+      close_modal_btn     = document.querySelector(".close_modal"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -62,6 +66,8 @@ var APP = function(){
       candidate_template = Handlebars.compile(candidate_source),
       location_source    = document.querySelector("#template-location").innerHTML,
       location_template  = Handlebars.compile(location_source),
+      candidate_full_src = document.querySelector("#template-candidate-modal").innerHTML,
+      candidate_full_tmp = Handlebars.compile(candidate_full_src),
       app;
 
   //
@@ -80,7 +86,7 @@ var APP = function(){
     //
     get_geolocation : function(){
       // obtiene la ubicación mediante el API de geolocalización HTML5
-      navigator.geolocation.getCurrentPosition(this.success_geolocation);
+      navigator.geolocation.getCurrentPosition(app.success_geolocation);
     },
 
     // [ GET LOCATION SUCCESS ]
@@ -273,12 +279,30 @@ var APP = function(){
     },
 
     //
-    // [ T H E   L O C A T I O N   S E L E C T O R ]
-    // ---------------------------------------------
+    // [ T H E   L O C A T I O N   S E L E C T O R  - S T A T E S ]
+    // ------------------------------------------------------------
     //
 
+    // [ LOAD THE STATE LIST ]
+    // -----------------------
+    //
+    get_states : function(){
+      // carga el archivo de estados y manda a llamar a la
+      // función que llena el selector de estado
+      var that = this;
+      d3.csv(states_csv, null, function(error, rows){
+        states_array = rows;
+        that.set_states(rows);
+      });
+    },
+
     // [ FILL THE STATE SELECTOR ]
+    // ---------------------------
+    //
     set_states : function(states){
+      // después de obtener la lista de estados, se llena el 
+      // selector de estado. Al inicio de la lista, se agrega 
+      // una entrada para la frase "selecciona estado"
       states.unshift({clave_entidad : 0, nombre:"selecciona un estado", url : ""});
       states.forEach(function(value, index, array){
         var option = document.createElement('option');
@@ -289,35 +313,14 @@ var APP = function(){
       });
     },
 
-    // [ LOAD THE STATE LIST ]
-    get_states : function(){
-      var that = this;
-      d3.csv(states_csv, null, function(error, rows){
-        states_array = rows;
-        that.set_states(rows);
-      });
-    },
-
-    // [ FILL THE CITY SELECTOR ]
-    set_cities : function(e){
-      var state_id = typeof e === "object" ? e.currentTarget.value : e;
-      var cities = app.get_cities_by_state(state_id);
-      cities.unshift({
-        clave_entidad : 0, 
-        clave_municipio:0, 
-        nombre : "selecciona un municipio"
-      });
-      city_selector.innerHTML = "";
-      cities.forEach(function(value, index, array){
-        var option = document.createElement('option');
-        var text   = document.createTextNode(value.nombre);
-        option.appendChild(text);
-        option.setAttribute("value", value.clave_municipio);
-        city_selector.appendChild(option);
-      });
-    },
+    //
+    // [ T H E   L O C A T I O N   S E L E C T O R  - C I T I E S ]
+    // ------------------------------------------------------------
+    //
 
     // [ LOAD THE CITY LIST ]
+    // ----------------------
+    //
     get_cities : function(){
       var that = this;
       d3.csv(cities_csv, null, function(error, rows){
@@ -326,7 +329,9 @@ var APP = function(){
       });
     },
 
-    // [ MAP THE CITY ]
+    // [ MAP THE CITIES ]
+    // ------------------
+    //
     map_cities : function(cities){
       var map  = [], 
       counter  = 0, 
@@ -353,7 +358,53 @@ var APP = function(){
       app.set_cities("0");
     },
 
+    // [ FILL THE CITY SELECTOR ]
+    // --------------------------
+    //
+    set_cities : function(e){
+      // actualiza la lista de ciudades. La variable que recibe puede
+      // ser un evento o el id del destado. Con este id, obtiene la 
+      // lista de municipios y actualiza el apuntador de estado
+      var state_id = typeof e === "object" ? e.currentTarget.value : e,
+          _cities  = app.get_cities_by_state(state_id);
+
+      current_state = state_id;
+
+      // a la lista de ciudades agrega la leyenda "selecciona un municipio"
+      _cities.unshift({
+        clave_entidad : 0, 
+        clave_municipio:0, 
+        nombre : "selecciona un municipio"
+      });
+
+      // vacía el <select>, y luego genera un <option> para 
+      // cada ciudad
+      city_selector.innerHTML = "";
+      _cities.forEach(function(value, index, array){
+        var option = document.createElement('option');
+        var text   = document.createTextNode(value.nombre);
+        option.appendChild(text);
+        option.setAttribute("value", value.clave_municipio);
+        city_selector.appendChild(option);
+      });
+    },
+
+    // [ SELECT A CITY ]
+    // -----------------
+    //
+    set_city : function(e){
+      var city_id    = typeof e === "object" ? e.currentTarget.value : e,
+      state_displace = cities_map_array[current_state - 1][0],
+      city_object    = cities_array[+state_displace+(city_id-1)];
+
+      current_city = city_id;
+
+      console.log(this);
+    },
+
     // [ GET CITIES BY STATE ]
+    // -----------------------
+    //
     get_cities_by_state : function(state_id){
       if(! +state_id) return [];
 
@@ -364,10 +415,12 @@ var APP = function(){
 
     //
     // [ T H E   D I S T R I C T   D A T A ]
-    // ---------------------------------------------
+    // -------------------------------------
     //
 
     // [ LOAD THE DISTRICT LIST ]
+    // --------------------------
+    //
     get_districts : function(){
       var that = this;
       d3.csv(districts_csv, null, function(error, rows){
@@ -377,6 +430,8 @@ var APP = function(){
     },
 
     // [ MAP THE CITY ]
+    // ----------------
+    //
     map_districts : function(districts){
       var map          = [],
       state            = [],
@@ -422,6 +477,9 @@ var APP = function(){
       return map;
     },
 
+    // [ GET THE CITIES FROM THE DISTRICT ]
+    // ------------------------------------
+    //
     set_cities_by_district : function(state, district){
       var _cities_array = districts_map_array[+state - 1][+district - 1],
           _city_list    = [],
@@ -452,24 +510,23 @@ var APP = function(){
     },
 
     //
-    // [ T H E   G O O G L E   D I S T R I C T   M A P ]
-    // -------------------------------------------------
+    // [ T H E   G O O G L E   M A P S   F U N C T I O N S ]
+    // -----------------------------------------------------
     //
 
     // [ INITIALIZE THE DISTRICT MAP ]
+    // -------------------------------
+    //
     initialize_district_map : function(e){
-      var mapOptions = {
-        center : {
-          lat : district_map_center[0],
-          lng : district_map_center[1]
-        },
-        zoom : 10
-      };
-      google_district_map = new google.maps.Map(district_map, mapOptions);
-      this.draw_polygon(google_district_map);
+      var center = {lat : district_map_center[0],lng : district_map_center[1]};
+      
+      google_district_map = this._draw_map(center, 15, district_map);
+      this._draw_polygon(google_district_map);
     },
 
     // [ SET THE MAP CENTER ]
+    // ----------------------
+    //
     set_district_map_center : function(e){
       var city_id  = typeof e === "object" ? e.currentTarget.value : e,
           state_id = state_selector.value,
@@ -487,7 +544,28 @@ var APP = function(){
       district_map_center = [+city.lat, +city.lng];
     },
 
-    draw_polygon : function(map){
+    // [ INITIALIZE THE LOCATION MAP ]
+    // -------------------------------
+    //
+    initialize_locations_map : function(center){
+      google_location_map = this._draw_map(center, 15, locations_map);
+    },
+
+    // [ DRAW MAP ]
+    // ------------
+    //
+    _draw_map : function(point, zoom, element){
+      var mapOptions = {
+        center : point,
+        zoom : zoom
+      };
+      return new google.maps.Map(element, mapOptions);
+    },
+
+    // [ DRAW POLYGON ]
+    // ----------------
+    //
+    _draw_polygon : function(map){
       var coords = [];
       current_polygon.forEach(function(point){
         coords.push(new google.maps.LatLng(point[1], point[0]));
@@ -502,25 +580,12 @@ var APP = function(){
         fillOpacity: 0.35
       });
 
-      console.log(coords, district_polygon, map);
       district_polygon.setMap(map);
     },
 
-    // current_polygon
-
+    // [ GEOLOCATE FROM GOOGLE ]
+    // -------------------------
     //
-    // [ T H E   G O O G L E   L O C A T I O N S   M A P ]
-    // ---------------------------------------------------
-    //
-
-    initialize_locations_map : function(center){
-      var mapOptions = {
-        center : center,
-        zoom : 15
-      };
-      google_location_map = new google.maps.Map(locations_map, mapOptions);
-    },
-
     get_geolocation_from_google : function(address){
       var d    = current_district_data,
           that = this,
@@ -534,16 +599,73 @@ var APP = function(){
           console.log("fail fail fail");
         }
       });
+    },
+
+    //
+    // [ T H E   M O D A L   S T U F F ]
+    // -----------------------------------------------------
+    //
+
+    // [ SHOW THE MODAL ]
+    // ------------------
+    //
+    set_modal : function(e){
+      var candidate_id = e.delegateTarget.getAttribute("data-index"),
+          _candidate   = candidates_array[candidate_id],
+          html         = candidate_full_tmp(_candidate);
+      
+      modal.innerHTML = html;
+
+      modal_background.style.visibility = "visible";
+      modal_background.style.opacity = 1;
+      modal_container.style.visibility = "visible";
+      modal_container.querySelector(".md-content").style.opacity = 1;
+    },
+
+    // [ CLOSE THE MODAL ]
+    // -------------------
+    //
+    close_modal : function(){
+      modal_container.querySelector(".md-content").style.opacity = 0;
+      modal_background.style.opacity = 0;
+      modal_background.style.visibility = "hidden";
+      modal_container.style.visibility = "hidden";
+      modal.innerHTML = "";
     }
   };
+
+  // [ FILTER THE DIV WITH THE MODAL ID ]
+  // ------------------------------------
+  //
+  var is_candidate = function(el){
+    return el.getAttribute('data-index');
+  }
+
+  // [ THE DELEGATE HELPER ]
+  // -----------------------
+  //
+  var delegate = function(criteria, listener, scope){
+    return function(e){
+      var el = e.target;
+      do{
+        if(!criteria(el)) continue;
+        e.delegateTarget = el;
+        listener.apply(scope, arguments);
+        return;
+      } while((el = el.parentNode));
+    }
+  }
 
   //
   // [ R I G   T H E   U I ]
   // -----------------------
   //
   state_selector.onchange = app.set_cities;
-  city_selector.onchange  = app.set_district_map_center;
-  geolocation_btn.onclick = app.get_geolocation();
+  city_selector.onchange  = app.set_city.bind(app);
+  geolocation_btn.onclick = app.get_geolocation;
+  candidate_container.addEventListener('click', delegate(is_candidate, app.set_modal, app));
+  close_modal_btn.onclick = app.close_modal;
+
 
   //
   // [ R E T U R N   T H E   A P P ]
