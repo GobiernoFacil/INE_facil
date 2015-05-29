@@ -1150,6 +1150,16 @@ section.container {
 .viz {
   padding-bottom: 120px; }
 
+#graph p {
+  margin: 0 0 5px; }
+  #graph p .label {
+    display: inline-block;
+    width: 300px;
+    text-align: right; }
+  #graph p span.bar {
+    display: inline-block;
+    background-color: red; }
+
 /* =los partidos
 -------------------------------------------------------------- */
 .partidin {
