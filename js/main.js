@@ -30,6 +30,7 @@ var APP = function(){
   // crea una referencia a los elementos de UI.
       state_selector      = document.querySelector("#district-selector-container select[name='state']"),
       city_selector       = document.querySelector("#district-selector-container select[name='city']"),
+      district_map_container = document.querySelector("#district-map-container"),
       district_map        = document.querySelector("#district-map-container .map"),
       locations_map       = document.querySelector("#city-map-container .map"),
       candidate_container = document.querySelector("#district-candidates-container ul"),
@@ -522,6 +523,8 @@ var APP = function(){
       
       google_district_map = this._draw_map(center, 15, district_map);
       this._draw_polygon(google_district_map);
+
+      district_map_container.className = "open";
     },
 
     // [ SET THE MAP CENTER ]
