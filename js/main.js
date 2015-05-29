@@ -38,6 +38,7 @@ var APP = function(){
       modal_background    = document.querySelector("div.ine-overlay"),
       modal_container     = document.querySelector("div.modal"),
       modal               = document.querySelector("#diputable_info"),
+      close_modal_btn     = document.querySelector(".close_modal"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -519,7 +520,7 @@ var APP = function(){
     initialize_district_map : function(e){
       var center = {lat : district_map_center[0],lng : district_map_center[1]};
       
-      google_district_map = this._draw_map(center, 10, district_map);
+      google_district_map = this._draw_map(center, 15, district_map);
       this._draw_polygon(google_district_map);
     },
 
@@ -551,7 +552,7 @@ var APP = function(){
     },
 
     // [ DRAW MAP ]
-    // ----------------
+    // ------------
     //
     _draw_map : function(point, zoom, element){
       var mapOptions = {
@@ -600,22 +601,60 @@ var APP = function(){
       });
     },
 
+    //
+    // [ T H E   M O D A L   S T U F F ]
+    // -----------------------------------------------------
+    //
+
+    // [ SHOW THE MODAL ]
+    // ------------------
+    //
     set_modal : function(e){
-      // candidate_full_tmp
+      var candidate_id = e.delegateTarget.getAttribute("data-index"),
+          _candidate   = candidates_array[candidate_id],
+          html         = candidate_full_tmp(_candidate);
+      
+      modal.innerHTML = html;
+
       modal_background.style.visibility = "visible";
       modal_background.style.opacity = 1;
       modal_container.style.visibility = "visible";
       modal_container.querySelector(".md-content").style.opacity = 1;
-      var candidate_id = e,
-          _candidate   = candidates_array[candidate_id],
-          html         = candidate_full_tmp(_candidate);
-      modal.innerHTML = html;
     },
 
+    // [ CLOSE THE MODAL ]
+    // -------------------
+    //
     close_modal : function(){
-      
+      modal_container.querySelector(".md-content").style.opacity = 0;
+      modal_background.style.opacity = 0;
+      modal_background.style.visibility = "hidden";
+      modal_container.style.visibility = "hidden";
+      modal.innerHTML = "";
     }
   };
+
+  // [ FILTER THE DIV WITH THE MODAL ID ]
+  // ------------------------------------
+  //
+  var is_candidate = function(el){
+    return el.getAttribute('data-index');
+  }
+
+  // [ THE DELEGATE HELPER ]
+  // -----------------------
+  //
+  var delegate = function(criteria, listener, scope){
+    return function(e){
+      var el = e.target;
+      do{
+        if(!criteria(el)) continue;
+        e.delegateTarget = el;
+        listener.apply(scope, arguments);
+        return;
+      } while((el = el.parentNode));
+    }
+  }
 
   //
   // [ R I G   T H E   U I ]
@@ -624,6 +663,9 @@ var APP = function(){
   state_selector.onchange = app.set_cities;
   city_selector.onchange  = app.set_city.bind(app);
   geolocation_btn.onclick = app.get_geolocation;
+  candidate_container.addEventListener('click', delegate(is_candidate, app.set_modal, app));
+  close_modal_btn.onclick = app.close_modal;
+
 
   //
   // [ R E T U R N   T H E   A P P ]
