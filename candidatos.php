@@ -4,6 +4,7 @@
 	$description 	= "Conoce los candidatos de tu distrito.";
 	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 	<!-- THE HTML TEMPLATES -->
+	<!-- CANDIDATE TEMPLATE -->
 	<script id="template-candidate" type="text/x-handlebars-template">
     <li class="col-xs-4 col-sm-3">
       <div data-index="{{_index}}">
@@ -15,8 +16,15 @@
       </div>
     </li>
 	</script>
+	<!-- LOCATION TEMPLATE -->
 	<script id="template-location" type="text/x-handlebars-template">
     	<p><span class="label">{{cargo}}:</span> {{nombre}} {{apellidos}} </p>
+	</script>
+	<!-- TITLE TEMPLATE -->
+	<script id="template-title" type="text/x-handlebars-template">
+	  02. Conoce los candidatos del 
+	  <strong>Distrito {{district}}</strong>.
+	  <span>{{city}}, {{state}}</span>
 	</script>
 <section class="container">
 	<div class="row">		
@@ -53,7 +61,7 @@
 			<div class="col-md-12">
 				<!-- los candidatos a mantenidos del distrito -->
 				<section id="district-candidates-container">
-				    <h2>02. Conoce los candidatos del <strong>Distrito 12</strong>. <span>Puebla, Puebla</span></h2>
+				    <h2>02. Conoce a los candidatos</h2>
 				    <p>Estos son los candidatos del distrito</p>
 				    <ul class="row diputables"></ul>
 				</section>

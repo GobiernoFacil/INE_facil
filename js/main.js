@@ -30,7 +30,7 @@ var APP = function(){
   // crea una referencia a los elementos de UI.
       state_selector      = document.querySelector("#district-selector-container select[name='state']"),
       city_selector       = document.querySelector("#district-selector-container select[name='city']"),
-      district_map_container = document.querySelector("#district-map-container"),
+      district_map_container  = document.querySelector("#district-map-container"),
       locations_map_container = document.querySelector("#city-map-container"),
       district_map        = document.querySelector("#district-map-container .map"),
       locations_map       = document.querySelector("#city-map-container .map"),
@@ -41,6 +41,7 @@ var APP = function(){
       modal_container     = document.querySelector("div.modal"),
       modal               = document.querySelector("#diputable_info"),
       close_modal_btn     = document.querySelector(".close_modal"),
+      candidates_title    = document.querySelector("#district-candidates-container h2"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -52,24 +53,27 @@ var APP = function(){
       cities_map_array      = [],
       districts_map_array   = [],
       district_cities_array = [],
-      google_district_map  = null,
-      google_location_map  = null,
-      google_geocoder      = new google.maps.Geocoder(),
-      district_key         = null,
-      current_location     = null,
-      current_location_key = null,
-      current_polygon      = null,
-      current_state        = null,
-      current_city         = null,
-      current_district     = null,
+      google_markers_array  = [],
+      google_district_map   = null,
+      google_location_map   = null,
+      google_geocoder       = new google.maps.Geocoder(),
+      district_key          = null,
+      current_location      = null,
+      current_location_key  = null,
+      current_polygon       = null,
+      current_state         = null,
+      current_city          = null,
+      current_district      = null,
       current_district_data = null,
   // [ SET THE HANDLEBARS TEMPLATES ]
       candidate_source   = document.querySelector("#template-candidate").innerHTML,
       candidate_template = Handlebars.compile(candidate_source),
-      location_source    = document.querySelector("#template-location").innerHTML,
-      location_template  = Handlebars.compile(location_source),
       candidate_full_src = document.querySelector("#template-candidate-modal").innerHTML,
       candidate_full_tmp = Handlebars.compile(candidate_full_src),
+      location_source    = document.querySelector("#template-location").innerHTML,
+      location_template  = Handlebars.compile(location_source),
+      title_source       = document.querySelector("#template-title").innerHTML,
+      title_template     = Handlebars.compile(title_source),
       app;
 
   //
@@ -203,11 +207,20 @@ var APP = function(){
           lat: district_map_center[0], 
           lng: district_map_center[1]
         });
+        this._draw_polygon(google_district_map);
+        this._draw_markers(google_district_map, current_district_data.cities);
       }
 
       // se manda a llamar la información de candidatos y de casilla
       this.get("candidate", [district_key]);
       this.get("location", [current_location]);
+
+      var _title_data = {
+        district : current_district_data.district,
+        state    : current_district_data.state.nombre,
+        city     : current_district_data.city.nombre
+      }
+      candidates_title.innerHTML = title_template(_title_data);
     },
 
     // [ DON-PATO-API-CALL-SUCCESS (CANDIDATE) ]
@@ -244,7 +257,6 @@ var APP = function(){
       + first_element.direccion.calle + " " 
       + (first_element.direccion.numero != "Sin Número" ? first_element.direccion.numero : "");
 
-      console.log(address);
       // se comienza a generar el HTML para la sección de funcionarios de casilla
       html = '<div class="col-sm-5"><h3 class="address">' + address + "</h3>";
       html += "<h4>" + first_element.referencia + "</h4></div>";
@@ -401,7 +413,7 @@ var APP = function(){
 
       current_city = city_id;
 
-      console.log(this);
+      this.get("search", [+city_object.lat, +city_object.lng]);
     },
 
     // [ GET CITIES BY STATE ]
@@ -524,28 +536,8 @@ var APP = function(){
       
       google_district_map = this._draw_map(center, 15, district_map);
       this._draw_polygon(google_district_map);
-
+      this._draw_markers(google_district_map, current_district_data.cities);
       district_map_container.className = "open";
-    },
-
-    // [ SET THE MAP CENTER ]
-    // ----------------------
-    //
-    set_district_map_center : function(e){
-      var city_id  = typeof e === "object" ? e.currentTarget.value : e,
-          state_id = state_selector.value,
-          cities   = app.get_cities_by_state(state_id),
-          city, i;
-
-      if(! cities.length || ! +city_id) return;
-
-      for(i = 0; i < cities.length; i++){
-        if(cities[i].clave_municipio == city_id){
-          city = cities[i];
-          break;
-        }
-      }
-      district_map_center = [+city.lat, +city.lng];
     },
 
     // [ INITIALIZE THE LOCATION MAP ]
@@ -562,7 +554,8 @@ var APP = function(){
     _draw_map : function(point, zoom, element){
       var mapOptions = {
         center : point,
-        zoom : zoom
+        zoom : zoom,
+        scrollwheel :false
       };
       return new google.maps.Map(element, mapOptions);
     },
@@ -586,6 +579,34 @@ var APP = function(){
       });
 
       district_polygon.setMap(map);
+    },
+
+    // [ DRAW MARKERS ]
+    // ----------------
+    //
+    _draw_markers : function(map, cities){
+      google_markers_array.forEach(function(el){
+        el.setMap(null);
+      });
+
+      cities.forEach(function(city){
+        var infowindow = new google.maps.InfoWindow({
+          content: city.nombre
+        });
+
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(+city.lat, +city.lng),
+          map: map,
+          title: city.nombre,
+          visible : true
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+
+        google_markers_array.push(marker);
+      });
     },
 
     // [ GEOLOCATE FROM GOOGLE ]
