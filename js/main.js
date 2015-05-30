@@ -42,6 +42,7 @@ var APP = function(){
       modal               = document.querySelector("#diputable_info"),
       close_modal_btn     = document.querySelector(".close_modal"),
       candidates_title    = document.querySelector("#district-candidates-container h2"),
+      casilla_title    	  = document.querySelector(".casilla h2"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -538,6 +539,8 @@ var APP = function(){
       this._draw_polygon(google_district_map);
       this._draw_markers(google_district_map, current_district_data.cities);
       district_map_container.className = "open";
+      candidates_title.className 	   = "live";
+      casilla_title.className 	   = "live";
     },
 
     // [ INITIALIZE THE LOCATION MAP ]
