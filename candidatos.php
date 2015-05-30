@@ -33,27 +33,37 @@
 			<div class="divider" data-text="Candidatos y Casillas"></div>
 			<div class="col-md-12">	
 				<h2>01. Busca tu distrito</h2>
-				<p class="lead">Para conocer tus candidatos busca primero tu distrito</p>
-				<p><a class="location">ubícate chavo</a></p>
+				<p class="lead">Para conocer tus candidatos proporciona una ubicación:</p>
+				
 				<!-- [ el selector de distrito ]  -->
 				<!-- Esta información se carga de un para de CSVs -->
 				<section id="district-selector-container">
+					<div class="row">
+					<div class="col-sm-6 ubica">
+						<h3 class="ubica">Ubicación Actual</h3>
+						<a class="location">Utiliza tu ubicación actual</a>
+					</div>
+					<div class="col-sm-6 ubica">
 				  <form>
+					  <h3 class="ubica">O busca por municipio</h3>
 				    <p>
-				      <label>Selecciona tu estado:</label>
+				     <!-- <label>Selecciona tu estado:</label>-->
 				      <select name="state"></select>
 				    </p>
 				    <p>
-				      <label>Selecciona tu municipio:</label>
+				    <!--  <label>Selecciona tu municipio:</label>-->
 				      <select name="city"></select>
 				    </p>
 				  </form>
-				  
-				  <!-- el mapa del distrito -->
+				  </div>
+				    </div>
+				    <!-- el mapa del distrito -->
 				  <div id="district-map-container">
 				  	<div class="map"></div>
 				  </div>
+				  
 				</section>
+				
 			</div>
 
 			
@@ -62,7 +72,6 @@
 				<!-- los candidatos a mantenidos del distrito -->
 				<section id="district-candidates-container">
 				    <h2>02. Conoce a los candidatos</h2>
-				    <p>Estos son los candidatos del distrito</p>
 				    <ul class="row diputables"></ul>
 				</section>
 				<!-- la información del distrito -->

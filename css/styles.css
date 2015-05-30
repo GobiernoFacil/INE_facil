@@ -1054,7 +1054,7 @@ section.container {
   width: 100%; }
 
 .diputables {
-  padding-bottom: 40px; }
+  padding-bottom: 0; }
   .diputables li {
     list-style: none;
     text-align: center;
@@ -1131,7 +1131,7 @@ section.container {
     padding-top: 37px; }
 
 .las_casillas {
-  padding: 30px 0 60px; }
+  padding: 30px 0 0; }
   .las_casillas h3 {
     border-bottom: 1px solid #777;
     margin-bottom: 20px;
@@ -1157,14 +1157,43 @@ section.container {
   padding-bottom: 120px; }
 
 #graph p {
-  margin: 0 0 5px; }
+  margin: 0 0 5px;
+  font-size: 14px; }
+  #graph p strong {
+    font-weight: 500;
+    color: #3A3838; }
   #graph p .label {
+    color: #ccc;
     display: inline-block;
-    width: 300px;
-    text-align: right; }
+    width: 230px;
+    text-align: right;
+    padding-right: 6px;
+    font-weight: 300; }
   #graph p span.bar {
     display: inline-block;
     background-color: red; }
+    #graph p span.bar span.value {
+      color: transparent;
+      margin-left: 5px;
+      display: inline-block; }
+    #graph p span.bar:hover {
+      background: #3A3838 !important;
+      cursor: pointer; }
+      #graph p span.bar:hover .value {
+        color: white; }
+
+.lead {
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 1.5em; }
+
+.ubica {
+  text-align: center;
+  padding-bottom: 50px; }
+  .ubica h3 {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 20px;
+    padding-bottom: 15px; }
 
 /* =los partidos
 -------------------------------------------------------------- */
@@ -1214,10 +1243,10 @@ section.container {
 /* =Modal
 -------------------------------------------------------------- */
 .modal {
-  position: absolute;
+  position: fixed;
   top: 10%;
   left: 50%;
-  height: auto;
+  height: 90%;
   max-width: 980px;
   min-width: 320px;
   width: 90%;
@@ -1272,8 +1301,11 @@ section.container {
   background: #fff;
   min-height: 269px;
   margin: 0 auto;
+  overflow: hidden;
+  overflow-y: scroll;
   padding: 28px 15px;
   position: relative;
+  max-height: 90%;
   width: 80%;
   -webkit-opacity: 0;
   -moz-opacity: 0;
@@ -1290,6 +1322,15 @@ section.container {
         color: #FF3B77; }
   .md-content h4 {
     font-size: 16px; }
+  .md-content figure {
+    background: white;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    width: 100%; }
+    .md-content figure img {
+      width: 100%;
+      height: auto; }
   .md-content p {
     margin: 10px 0 1.5em;
     font-size: 15px; }
@@ -1315,10 +1356,10 @@ section.container {
 
 /* Effect Slide from the bottom */
 .effect .md-content {
-  -webkit-transform: translateY(20%);
-  -moz-transform: translateY(20%);
-  -ms-transform: translateY(20%);
-  transform: translateY(20%);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
   opacity: 0;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
