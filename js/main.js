@@ -83,9 +83,9 @@ var APP = function(){
   //
   app = {
 
-    //
-    // [ G E O L O C A L I Z E   T H E   S T U F F ]
-    // ---------------------------------------------
+    // /-------------------------------------------\
+    // | G E O L O C A L I Z E   T H E   S T U F F |
+    // \-------------------------------------------/ 
     //
 
     // [ GET LOCATION ]
@@ -114,9 +114,9 @@ var APP = function(){
       console.log("meh murió la geolocalización");
     },
     
-    //
-    // [ C A L L   T H E   "Don Pato"   A P I ]
-    // ----------------------------------------
+    // /--------------------------------------\
+    // | C A L L   T H E   "Don Pato"   A P I |
+    // \--------------------------------------/ 
     //
 
     // [ MAKE THE CALL]
@@ -208,8 +208,20 @@ var APP = function(){
           lat: district_map_center[0], 
           lng: district_map_center[1]
         });
-        this._draw_polygon(google_district_map);
+        // this._draw_polygon(google_district_map);
         this._draw_markers(google_district_map, current_district_data.cities);
+      }
+
+      // se inicia el mapa de casilla, en caso de que no se haya iniciado aún
+      if(! google_location_map){
+        this.initialize_locations_map();
+      }
+      else{
+        google_location_map.setCenter({
+          lat: district_map_center[0], 
+          lng: district_map_center[1]
+        });
+        this._draw_polygon(google_location_map);
       }
 
       // se manda a llamar la información de candidatos y de casilla
@@ -280,8 +292,9 @@ var APP = function(){
       // se agrega el html al contenedor
       location_container.innerHTML = html;
 
-      // se geolocaliza el chisme este
-      this.get_geolocation_from_google(address);
+      // se geolocaliza el chisme este.
+      // ACTUALIZACIÓN: Ya no se geolocaliza :P
+      // this.get_geolocation_from_google(address);
     },
 
     // [ FUCK! ]
@@ -293,9 +306,9 @@ var APP = function(){
       console.log(error);
     },
 
-    //
-    // [ T H E   L O C A T I O N   S E L E C T O R  - S T A T E S ]
-    // ------------------------------------------------------------
+    // /----------------------------------------------------------\
+    // | T H E   L O C A T I O N   S E L E C T O R  - S T A T E S |
+    // \----------------------------------------------------------/ 
     //
 
     // [ LOAD THE STATE LIST ]
@@ -328,9 +341,9 @@ var APP = function(){
       });
     },
 
-    //
-    // [ T H E   L O C A T I O N   S E L E C T O R  - C I T I E S ]
-    // ------------------------------------------------------------
+    // /----------------------------------------------------------\
+    // | T H E   L O C A T I O N   S E L E C T O R  - C I T I E S |
+    // \----------------------------------------------------------/ 
     //
 
     // [ LOAD THE CITY LIST ]
@@ -428,9 +441,9 @@ var APP = function(){
       return cities;
     },
 
-    //
-    // [ T H E   D I S T R I C T   D A T A ]
-    // -------------------------------------
+    // /-----------------------------------\
+    // | T H E   D I S T R I C T   D A T A |
+    // \-----------------------------------/ 
     //
 
     // [ LOAD THE DISTRICT LIST ]
@@ -524,9 +537,9 @@ var APP = function(){
       };
     },
 
-    //
-    // [ T H E   G O O G L E   M A P S   F U N C T I O N S ]
-    // -----------------------------------------------------
+    // /---------------------------------------------------\
+    // | T H E   G O O G L E   M A P S   F U N C T I O N S |
+    // \---------------------------------------------------/ 
     //
 
     // [ INITIALIZE THE DISTRICT MAP ]
@@ -536,7 +549,7 @@ var APP = function(){
       var center = {lat : district_map_center[0],lng : district_map_center[1]};
       
       google_district_map = this._draw_map(center, 15, district_map);
-      this._draw_polygon(google_district_map);
+      // this._draw_polygon(google_district_map);
       this._draw_markers(google_district_map, current_district_data.cities);
       district_map_container.className = "open";
       candidates_title.className 	   = "live";
@@ -546,8 +559,10 @@ var APP = function(){
     // [ INITIALIZE THE LOCATION MAP ]
     // -------------------------------
     //
-    initialize_locations_map : function(center){
+    initialize_locations_map : function(){
+      var center = {lat : district_map_center[0],lng : district_map_center[1]};
       google_location_map = this._draw_map(center, 15, locations_map);
+      this._draw_polygon(google_location_map);
       locations_map_container.className = "open";
     },
 
@@ -567,7 +582,15 @@ var APP = function(){
     // ----------------
     //
     _draw_polygon : function(map){
-      var coords = [];
+      var coords = [],
+          that   = this, 
+          center = {lat : district_map_center[0],lng : district_map_center[1]},
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(+center.lat, +center.lng),
+            map: map,
+            draggable:true
+          });
+
       current_polygon.forEach(function(point){
         coords.push(new google.maps.LatLng(point[1], point[0]));
       });
@@ -582,12 +605,22 @@ var APP = function(){
       });
 
       district_polygon.setMap(map);
+      //this._set_bounds(map, coords);
+
+      google.maps.event.addListener(marker,'dragend',function(event){
+        that.get("search", [event.latLng.lat(), event.latLng.lng()]);
+        // console.log(event);
+        //document.getElementById('lat').value = event.latLng.lat();
+        //document.getElementById('lng').value = event.latLng.lng();
+      });
     },
 
     // [ DRAW MARKERS ]
     // ----------------
     //
     _draw_markers : function(map, cities){
+      var points = [];
+      
       google_markers_array.forEach(function(el){
         el.setMap(null);
       });
@@ -595,10 +628,10 @@ var APP = function(){
       cities.forEach(function(city){
         var infowindow = new google.maps.InfoWindow({
           content: city.nombre
-        });
-
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(+city.lat, +city.lng),
+        }),
+        point  = new google.maps.LatLng(+city.lat, +city.lng),
+        marker = new google.maps.Marker({
+          position: point,
           map: map,
           title: city.nombre,
           visible : true
@@ -609,7 +642,23 @@ var APP = function(){
         });
 
         google_markers_array.push(marker);
+        points.push(point);
       });
+
+      this._set_bounds(map, points);
+    },
+
+    // [ DRAW MARKERS ]
+    // ----------------
+    //
+    _set_bounds : function(map, points){
+      var bounds = new google.maps.LatLngBounds();
+
+      points.forEach(function(point){
+        bounds.extend(point);
+      });
+
+      map.fitBounds(bounds);
     },
 
     // [ GEOLOCATE FROM GOOGLE ]
@@ -630,9 +679,9 @@ var APP = function(){
       });
     },
 
-    //
-    // [ T H E   M O D A L   S T U F F ]
-    // -----------------------------------------------------
+    // /-------------------------------\
+    // | T H E   M O D A L   S T U F F |
+    // \-------------------------------/ 
     //
 
     // [ SHOW THE MODAL ]
@@ -685,9 +734,9 @@ var APP = function(){
     }
   }
 
-  //
-  // [ R I G   T H E   U I ]
-  // -----------------------
+  // /---------------------\
+  // | R I G   T H E   U I |
+  // \---------------------/ 
   //
   state_selector.onchange = app.set_cities;
   city_selector.onchange  = app.set_city.bind(app);
@@ -696,9 +745,9 @@ var APP = function(){
   close_modal_btn.onclick = app.close_modal;
 
 
-  //
-  // [ R E T U R N   T H E   A P P ]
-  // -------------------------------
+  // /-----------------------------\
+  // | R E T U R N   T H E   A P P |
+  // \-----------------------------/ 
   //
   return app;
 };
