@@ -31,41 +31,41 @@
 					<div class="col-sm-4">
 						<h3><i class="cir1"></i>Circunscripción 1</h3>
 						<ol>
-							<li>Baja California</li>
-							<li>Baja California Sur</li>
-							<li>Sonora</li>
-							<li>Chihuahua</li>
-							<li>Sinaloa</li>
-							<li>Durango</li>
-							<li>Nayarit</li>
-							<li>Jalisco</li>
+							<li><span>Baja California</span></li>
+							<li><span>Baja California Sur</span></li>
+							<li><span>Sonora</span></li>
+							<li><span>Chihuahua</span></li>
+							<li><span>Sinaloa</span></li>
+							<li><span>Durango</span></li>
+							<li><span>Nayarit</span></li>
+							<li><span>Jalisco</span></li>
 						</ol>
 					</div>
 					
 					<div class="col-sm-4">
 						<h3><i class="cir2"></i>Circunscripción 2</h3>
 						<ol>
-							<li>Coahuila</li>
-							<li>Nuevo León</li>
-							<li>Tamaulipas</li>
-							<li>Zacatecas</li>
-							<li>Aguscalientes</li>
-							<li>San Luis Potosí</li>
-							<li>Guanajuato</li>
-							<li>Querétaro</li>
+							<li><span>Coahuila</span></li>
+							<li><span>Nuevo León</span></li>
+							<li><span>Tamaulipas</span></li>
+							<li><span>Zacatecas</span></li>
+							<li><span>Aguscalientes</span></li>
+							<li><span>San Luis Potosí</span></li>
+							<li><span>Guanajuato</span></li>
+							<li><span>Querétaro</span></li>
 						</ol>
 					</div>
 					
 					<div class="col-sm-4">
 						<h3><i class="cir3"></i>Circunscripción 3</h3>
 						<ol>
-							<li>Veracruz</li>
-							<li>Oaxaca</li>
-							<li>Tabasco</li>
-							<li>Chiapas</li>
-							<li>Campeche</li>
-							<li>Yucatán</li>
-							<li>Quintana Roo</li>
+							<li><span>Veracruz</span></li>
+							<li><span>Oaxaca</span></li>
+							<li><span>Tabasco</span></li>
+							<li><span>Chiapas</span></li>
+							<li><span>Campeche</span></li>
+							<li><span>Yucatán</span></li>
+							<li><span>Quintana Roo</span></li>
 						</ol>
 					</div>
 				</div>
@@ -73,21 +73,21 @@
 					<div class="col-sm-4">
 						<h3><i class="cir4"></i>Circunscripción 4</h3>
 						<ol>
-							<li>Guerrero</li>
-							<li>Morelos</li>
-							<li>Distrito Federal</li>
-							<li>Puebla</li>
-							<li>Tlaxcala</li>
+							<li><span>Guerrero</span></li>
+							<li><span>Morelos</span></li>
+							<li><span>Distrito Federal</span></li>
+							<li><span>Puebla</span></li>
+							<li><span>Tlaxcala</span></li>
 						</ol>
 					</div>
 					<div class="col-sm-4">
 						<h3><i class="cir5"></i>Circunscripción 5</h3>
 						<ol>
-							<li>Guerrero</li>
-							<li>Morelos</li>
-							<li>Distrito Federal</li>
-							<li>Puebla</li>
-							<li>Tlaxcala</li>
+							<li><span>Guerrero</span></li>
+							<li><span>Morelos</span></li>
+							<li><span>Distrito Federal</span></li>
+							<li><span>Puebla</span></li>
+							<li><span>Tlaxcala</span></li>
 						</ol>
 					</div>
 				</div>
