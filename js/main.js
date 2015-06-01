@@ -631,7 +631,6 @@ var APP = function(){
       });
 
       cities.forEach(function(city){
-        console.log(city, current_city);
         var infowindow = new google.maps.InfoWindow({
           content: city.nombre
         }),
