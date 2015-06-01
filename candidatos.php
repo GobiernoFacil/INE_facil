@@ -41,7 +41,8 @@
 					<div class="row">
 					<div class="col-sm-6 ubica">
 						<h3 class="ubica">Ubicación Actual</h3>
-						<a class="location">Utiliza tu ubicación actual</a>
+						<p><a class="location">Utiliza tu ubicación actual</a></p>
+						<p><small>Para geolocalizarte, dale primero permiso a tu navegador de compartir tu ubicación</small></p>
 					</div>
 					<div class="col-sm-6 ubica">
 				  <form>
@@ -86,6 +87,9 @@
 				<!-- la información de la casilla seleccionada -->
 				<section class="casilla">
 					 <h2>03. Ubica tu casilla</h2>
+					 <p class="lead">Está es tu ubicación actual, si esta no es tu ubicación, arrastra el marcador en el mapa para mostrar
+						 la información de la casilla.
+					 </p>
 					 <!-- el mapa de las casillas -->
 					 <div id="city-map-container">
 					 	<div class="map"></div>

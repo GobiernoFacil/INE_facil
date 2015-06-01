@@ -43,6 +43,7 @@ var APP = function(){
       close_modal_btn     = document.querySelector(".close_modal"),
       candidates_title    = document.querySelector("#district-candidates-container h2"),
       casilla_title    	  = document.querySelector(".casilla h2"),
+      casilla_lead    	  = document.querySelector(".casilla .lead"),
   
   // [ SET THE DATA CONTAINERS ]
   // crea las variables que contendrán la información de los CSV, y de los objetos 
@@ -557,6 +558,7 @@ var APP = function(){
       district_map_container.className = "open";
       candidates_title.className 	   = "live";
       casilla_title.className 	   = "live";
+      casilla_lead.className 	   = "lead show";
     },
 
     // [ INITIALIZE THE LOCATION MAP ]
