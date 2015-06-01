@@ -58,6 +58,8 @@ var APP = function(){
       google_district_map   = null,
       google_location_map   = null,
       google_geocoder       = new google.maps.Geocoder(),
+      google_polygon        = null,
+      google_polygon_marker = null,
       district_key          = null,
       current_location      = null,
       current_location_key  = null,
@@ -584,34 +586,37 @@ var APP = function(){
     _draw_polygon : function(map){
       var coords = [],
           that   = this, 
-          center = {lat : district_map_center[0],lng : district_map_center[1]},
-          marker = new google.maps.Marker({
-            position: new google.maps.LatLng(+center.lat, +center.lng),
-            map: map,
-            draggable:true
-          });
+          center = {lat : district_map_center[0],lng : district_map_center[1]};
+
+      if(google_polygon_marker) google_polygon_marker.setMap(null);
+
+
+      google_polygon_marker = new google.maps.Marker({
+        position: new google.maps.LatLng(+center.lat, +center.lng),
+        map: map,
+        draggable:true
+      });
 
       current_polygon.forEach(function(point){
         coords.push(new google.maps.LatLng(point[1], point[0]));
       });
 
-      district_polygon = new google.maps.Polygon({
+      if(google_polygon) google_polygon.setMap(null);
+
+      google_polygon = new google.maps.Polygon({
         paths: coords,
-        strokeColor: '#FF0000',
+        strokeColor: '#FF3B77',
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: '#FF0000',
+        fillColor: '#FF3B77',
         fillOpacity: 0.35
       });
 
-      district_polygon.setMap(map);
+      google_polygon.setMap(map);
       //this._set_bounds(map, coords);
 
-      google.maps.event.addListener(marker,'dragend',function(event){
+      google.maps.event.addListener(google_polygon_marker,'dragend',function(event){
         that.get("search", [event.latLng.lat(), event.latLng.lng()]);
-        // console.log(event);
-        //document.getElementById('lat').value = event.latLng.lat();
-        //document.getElementById('lng').value = event.latLng.lng();
       });
     },
 
@@ -626,6 +631,7 @@ var APP = function(){
       });
 
       cities.forEach(function(city){
+        console.log(city, current_city);
         var infowindow = new google.maps.InfoWindow({
           content: city.nombre
         }),
@@ -643,6 +649,8 @@ var APP = function(){
 
         google_markers_array.push(marker);
         points.push(point);
+
+        if(current_city == city.clave_municipio) infowindow.open(map,marker);
       });
 
       this._set_bounds(map, points);
