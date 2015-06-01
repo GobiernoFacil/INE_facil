@@ -21,10 +21,7 @@
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="/js/bower_components/d3/d3.min.js"></script>
   <script src="/js/bower_components/handlebars/handlebars.min.js"></script>
-  <script src="/js/main.js"></script>
-<?php else: ?>
-	<script src="/js/bower_components/countdownjs/countdown.min.js"></script>
-	<script src="/js/main.home.js"></script>
+  <script src="/js/main.js"></script>	
 <?php endif; ?>
 
 <?php if($body_class == "diputados"): ?>
@@ -32,6 +29,9 @@
   <script src="/js/main.partidos.js"></script>
 <?php endif; ?>
 
+<script src="/js/bower_components/countdownjs/countdown.min.js"></script>
+	<script src="/js/main.home.js"></script>
+	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
