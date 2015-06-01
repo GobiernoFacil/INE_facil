@@ -2,6 +2,7 @@
 	$body_class 	= "candidatos";
 	$title 			= "Candidatos a Elecciones Federales 2015";
 	$description 	= "Conoce los candidatos de tu distrito.";
+	$canonical		= "http://inefacil.com/candidatos-diputados-federales-2015/";
 	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 	<!-- THE HTML TEMPLATES -->
 	<!-- CANDIDATE TEMPLATE -->

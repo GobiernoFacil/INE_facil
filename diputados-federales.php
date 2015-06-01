@@ -2,6 +2,7 @@
 	$body_class 	= "diputados";
 	$title 			= "Diputados Federales elegidos por Estado y circunscripciones electorales de México";
 	$description 	= "Total de diputados federales elegidos por Estado y mapa de las circunscripciones electorales de México.";
+	$canonical		= "http://inefacil.com/diputados-por-estado-circunscripciones-electorales/";
 	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 
 <section class="container">

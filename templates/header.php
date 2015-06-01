@@ -18,7 +18,8 @@
 	<title><?php echo !$title ? "" :  $title ;?></title>
     <meta name="description" content="<?php echo !$description ? "" :  $description ;?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="canonical" href="<?php echo !$canonical ? "" :  $canonical ;?>">		
+	
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700,400italic' rel='stylesheet' type='text/css'></head>

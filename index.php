@@ -2,6 +2,7 @@
 	$body_class 	= "el_home";
 	$title 			= "INE Fácil, Elecciones Federales 2015";
 	$description 	= "Conoce los candidatos de tu distrito y encuentra tu casilla para votar en las Elecciones Federales 2015.";
+	$canonical		= "http://inefacil.com/";
 	include "templates/header.php";?>
 
 <section class="home">	
@@ -13,8 +14,8 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row links">
 					<div class="col-md-8 col-md-offset-2">
-						<a class="hvr-bounce-to-right" href="/candidatos.php">Conoce los Candidatos de tu distrito
-							y encuentra tu casilla <strong>&gt;</strong>
+						<a class="hvr-bounce-to-right" href="/candidatos-diputados-federales-2015/">
+							Conoce los Candidatos de tu distrito y encuentra tu casilla <strong>&gt;</strong>
 						</a>
 					</div>
 				</div>
@@ -41,8 +42,9 @@
 				</div>
 				<div class="col-md-8 col-md-offset-2">
 				<div class="links">
-					<a class="hvr-bounce-to-right" href="/diputados-federales.php">¿Cuántos Diputados 
-					federales se eligen por estado? <strong>&gt;</strong></a>
+					<a class="hvr-bounce-to-right" href="/diputados-por-estado-circunscripciones-electorales/">
+						¿Cuántos Diputados federales se eligen por estado? <strong>&gt;</strong>
+					</a>
 				</div>
 			</div>
 
