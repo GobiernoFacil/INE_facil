@@ -1571,6 +1571,24 @@ footer {
     padding-bottom: 16px; }
     .ubica h3 {
       font-size: 16px; }
+  .diputables li div {
+    min-height: 261px; }
+  .diputables li p {
+    font-size: 8px; }
+  .diputables li h2 {
+    padding: 0;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 51px; }
+  .diputables figure {
+    height: 121px; }
+  .las_casillas h3.address {
+    font-size: 21px; }
+  .las_casillas h4 {
+    font-size: 14px;
+    margin-bottom: 40px; }
+  .close_modal {
+    right: 10px; }
   .the_end, .the_end .right {
     text-align: center; } }
 
