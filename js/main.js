@@ -551,6 +551,7 @@ var APP = function(){
       var center = {lat : district_map_center[0],lng : district_map_center[1]};
       
       google_district_map = this._draw_map(center, 15, district_map);
+      console.log(this._draw_markers,google_district_map, current_district_data.cities);
       // this._draw_polygon(google_district_map);
       this._draw_markers(google_district_map, current_district_data.cities);
       district_map_container.className = "open";
@@ -624,8 +625,8 @@ var APP = function(){
     // ----------------
     //
     _draw_markers : function(map, cities){
+      console.log("markers!!!");
       var points = [];
-      
       google_markers_array.forEach(function(el){
         el.setMap(null);
       });
@@ -651,14 +652,14 @@ var APP = function(){
 
         if(current_city == city.clave_municipio) infowindow.open(map,marker);
       });
-
       this._set_bounds(map, points);
     },
 
-    // [ DRAW MARKERS ]
+    // [ SET BOUNDS ]
     // ----------------
     //
     _set_bounds : function(map, points){
+      console.log(map, points);
       var bounds = new google.maps.LatLngBounds();
 
       points.forEach(function(point){
@@ -666,34 +667,6 @@ var APP = function(){
       });
 
       map.fitBounds(bounds);
-    },
-
-    // [ DRAW MARKERS ]
-    // ----------------
-    //
-    _draw_markers : function(map, cities){
-      google_markers_array.forEach(function(el){
-        el.setMap(null);
-      });
-
-      cities.forEach(function(city){
-        var infowindow = new google.maps.InfoWindow({
-          content: city.nombre
-        });
-
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(+city.lat, +city.lng),
-          map: map,
-          title: city.nombre,
-          visible : true
-        });
-
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
-        });
-
-        google_markers_array.push(marker);
-      });
     },
 
     // [ GEOLOCATE FROM GOOGLE ]
