@@ -1278,7 +1278,10 @@ section.container {
 .diputados ol {
   padding: 0; }
   .diputados ol li {
+    color: #ccc;
     list-style-position: inside; }
+    .diputados ol li span {
+      color: #666; }
 
 #Mexico text {
   width: 50px;
