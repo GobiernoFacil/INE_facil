@@ -84,11 +84,10 @@
 					<div class="col-sm-4">
 						<h3><i class="cir5"></i>Circunscripción 5</h3>
 						<ol>
-							<li><span>Guerrero</span></li>
-							<li><span>Morelos</span></li>
-							<li><span>Distrito Federal</span></li>
-							<li><span>Puebla</span></li>
-							<li><span>Tlaxcala</span></li>
+							<li><span>Colima</span></li>
+							<li><span>Michoacán</span></li>
+							<li><span>Estado de México</span></li>
+							<li><span>Hidalgo</span></li>
 						</ol>
 					</div>
 				</div>
