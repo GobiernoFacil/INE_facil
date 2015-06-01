@@ -1245,6 +1245,8 @@ section.container {
 
 /* =diputados
 -------------------------------------------------------------- */
+.diputados header h1, .diputados header h2 {
+  text-align: left; }
 .diputados h1, .diputados h2 {
   font-size: 27px;
   text-align: center;
@@ -1267,6 +1269,8 @@ section.container {
     background: #FFF6E5; }
   .diputados h3 .cir5 {
     background: #FF7F66; }
+.diputados #graph {
+  padding-bottom: 120px; }
 .diputados #graph2 {
   margin: 40px 0; }
 .diputados .viz {
