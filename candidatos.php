@@ -7,7 +7,7 @@
 	<!-- THE HTML TEMPLATES -->
 	<!-- CANDIDATE TEMPLATE -->
 	<script id="template-candidate" type="text/x-handlebars-template">
-    <li class="col-xs-4 col-sm-3">
+    <li class="col-xs-6 col-sm-3">
       <div data-index="{{_index}}">
         <figure><img src="{{foto}}"></img>
         	<b>+ información</b>
