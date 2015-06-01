@@ -668,6 +668,34 @@ var APP = function(){
       map.fitBounds(bounds);
     },
 
+    // [ DRAW MARKERS ]
+    // ----------------
+    //
+    _draw_markers : function(map, cities){
+      google_markers_array.forEach(function(el){
+        el.setMap(null);
+      });
+
+      cities.forEach(function(city){
+        var infowindow = new google.maps.InfoWindow({
+          content: city.nombre
+        });
+
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(+city.lat, +city.lng),
+          map: map,
+          title: city.nombre,
+          visible : true
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+
+        google_markers_array.push(marker);
+      });
+    },
+
     // [ GEOLOCATE FROM GOOGLE ]
     // -------------------------
     //
