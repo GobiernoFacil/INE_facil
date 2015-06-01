@@ -701,7 +701,13 @@ var APP = function(){
     set_modal : function(e){
       var candidate_id = e.delegateTarget.getAttribute("data-index"),
           _candidate   = candidates_array[candidate_id],
-          html         = candidate_full_tmp(_candidate);
+          html;
+ 
+      _candidate.district = current_district_data.district;
+      _candidate.state    = current_district_data.state.nombre;
+      _candidate.city     = current_district_data.city.nombre;
+
+      html = candidate_full_tmp(_candidate);
       
       modal.innerHTML = html;
 
