@@ -1030,6 +1030,10 @@ section.container {
     font: 700 21px/0 "soberana", Helvetica, Arial, sans-serif;
     background-color: #3A3838; }
 
+#graph2 svg {
+  height: 450px;
+  width: 650px; }
+
 /* candidatos
 -------------------------------------------------------------- */
 .candidatos section {
@@ -1612,6 +1616,8 @@ footer {
       color: white; }
       #graph p .label strong {
         color: #ccc; }
+  #graph2 svg {
+    width: 100%; }
   .the_end, .the_end .right {
     text-align: center; } }
 
