@@ -1009,7 +1009,7 @@ p i.electos {
 /* sections
 -------------------------------------------------------------- */
 section.container {
-  padding: 0 0 50px; }
+  padding-bottom: 50px; }
   section.container h1 {
     font: 700 23px "soberana", Helvetica, Arial, sans-serif;
     padding-bottom: 40px; }
@@ -1525,7 +1525,17 @@ footer {
     text-align: center; }
   #countdown p {
     padding: 10px 0 0;
-    font-size: 14px; }
+    font-size: 13px; }
+    #countdown p .number {
+      font-size: 13px; }
+  header.main h1 {
+    font-size: 21px; }
+  header.main .date {
+    font-size: 15px;
+    margin-bottom: 0;
+    text-align: center; }
+  .el_home header.main h1 {
+    font-size: 42px; }
   .home, .se_vota {
     padding: 70px 0 80px; }
     .home h2, .se_vota h2 {
@@ -1547,6 +1557,20 @@ footer {
     height: 7px;
     margin: 0;
     width: 5px; }
+  .divider {
+    margin-bottom: 40px; }
+    .divider:after {
+      font-size: 14px;
+      padding: 20px 30px; }
+  .lead {
+    font-size: 15px; }
+  .candidatos section h2 {
+    padding: 20px 0;
+    font-size: 18px; }
+  .ubica {
+    padding-bottom: 16px; }
+    .ubica h3 {
+      font-size: 16px; }
   .the_end, .the_end .right {
     text-align: center; } }
 
