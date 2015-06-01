@@ -4,6 +4,7 @@
 	$description 	= "Conoce los candidatos de tu distrito.";
 	include $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 	<!-- THE HTML TEMPLATES -->
+	<!-- CANDIDATE TEMPLATE -->
 	<script id="template-candidate" type="text/x-handlebars-template">
     <li class="col-xs-4 col-sm-3">
       <div data-index="{{_index}}">
@@ -15,8 +16,15 @@
       </div>
     </li>
 	</script>
+	<!-- LOCATION TEMPLATE -->
 	<script id="template-location" type="text/x-handlebars-template">
     	<p><span class="label">{{cargo}}:</span> {{nombre}} {{apellidos}} </p>
+	</script>
+	<!-- TITLE TEMPLATE -->
+	<script id="template-title" type="text/x-handlebars-template">
+	  02. Conoce los candidatos del 
+	  <strong>Distrito {{district}}</strong>.
+	  <span>{{city}}, {{state}}</span>
 	</script>
 <section class="container">
 	<div class="row">		
@@ -24,28 +32,38 @@
 		<div id="main">
 			<div class="divider" data-text="Candidatos y Casillas"></div>
 			<div class="col-md-12">	
-				<h2>01. Busca tu distrito</h2>
-				<p class="lead">Para conocer tus candidatos busca primero tu distrito</p>
-				<p><a class="location">ubícate chavo</a></p>
+				<h2 class="live">01. Busca tu distrito</h2>
+				<p class="lead">Para conocer tus candidatos proporciona una ubicación:</p>
+				
 				<!-- [ el selector de distrito ]  -->
 				<!-- Esta información se carga de un para de CSVs -->
 				<section id="district-selector-container">
+					<div class="row">
+					<div class="col-sm-6 ubica">
+						<h3 class="ubica">Ubicación Actual</h3>
+						<a class="location">Utiliza tu ubicación actual</a>
+					</div>
+					<div class="col-sm-6 ubica">
 				  <form>
+					  <h3 class="ubica">O busca por municipio</h3>
 				    <p>
-				      <label>Selecciona tu estado:</label>
+				     <!-- <label>Selecciona tu estado:</label>-->
 				      <select name="state"></select>
 				    </p>
 				    <p>
-				      <label>Selecciona tu municipio:</label>
+				    <!--  <label>Selecciona tu municipio:</label>-->
 				      <select name="city"></select>
 				    </p>
 				  </form>
-				  
-				  <!-- el mapa del distrito -->
+				  </div>
+				    </div>
+				    <!-- el mapa del distrito -->
 				  <div id="district-map-container">
 				  	<div class="map"></div>
 				  </div>
+				  
 				</section>
+				
 			</div>
 
 			
@@ -53,8 +71,7 @@
 			<div class="col-md-12">
 				<!-- los candidatos a mantenidos del distrito -->
 				<section id="district-candidates-container">
-				    <h2>02. Conoce los candidatos del <strong>Distrito 12</strong>. <span>Puebla, Puebla</span></h2>
-				    <p>Estos son los candidatos del distrito</p>
+				    <h2>02. Conoce a los candidatos</h2>
 				    <ul class="row diputables"></ul>
 				</section>
 				<!-- la información del distrito -->
