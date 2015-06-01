@@ -41,7 +41,7 @@
 					<div class="row">
 					<div class="col-sm-6 ubica">
 						<h3 class="ubica">Ubicación Actual</h3>
-						<a class="location">Utiliza tu ubicación actual</a>
+						<a href="#" class="location">Utiliza tu ubicación actual</a>
 					</div>
 					<div class="col-sm-6 ubica">
 				  <form>
