@@ -68,12 +68,20 @@
 					</p>
 					<div class="col-md-3">
 						<p class="lana">$3,909,545,803</p>
-						<p class="lana">$1,172,863,740</p>
-						<p class="lana">$117,286,374</p>
 					</div>
 					<div class="col-md-9">
 						<div class="permanentes"></div>
+					</div>
+					<div class="col-md-3">
+						<p class="lana">$1,172,863,740</p>
+					</div>
+					<div class="col-md-9">
 						<div class="campaign"></div>
+					</div>
+					<div class="col-md-3">
+						<p class="lana">$117,286,374</p>
+					</div>
+					<div class="col-md-9">
 						<div class="especificas"></div>
 					</div>
 				</div>

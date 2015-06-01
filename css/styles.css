@@ -1526,14 +1526,27 @@ footer {
   #countdown p {
     padding: 10px 0 0;
     font-size: 14px; }
-  .home {
+  .home, .se_vota {
     padding: 70px 0 80px; }
-    .home h2 {
+    .home h2, .se_vota h2 {
       font-size: 80px; }
-      .home h2 span {
+      .home h2 span, .se_vota h2 span {
         font-size: 40px; }
-    .home .links a {
+    .home .links a, .se_vota .links a {
       min-height: 40px; }
+  .se_vota h2, .se_gasta h2 {
+    font-size: 30px; }
+  .se_vota .lead, .se_gasta .lead {
+    font-size: 20px; }
+  .se_vota .lana, .se_gasta .lana {
+    text-align: left; }
+  p i.representacion {
+    margin-top: 40px; }
+  .electos, .representacion {
+    background-size: 100% auto;
+    height: 7px;
+    margin: 0;
+    width: 5px; }
   .the_end, .the_end .right {
     text-align: center; } }
 
