@@ -274,7 +274,8 @@ var APP = function(){
       + (first_element.direccion.numero != "Sin Número" ? first_element.direccion.numero : "");
 
       // se comienza a generar el HTML para la sección de funcionarios de casilla
-      html = '<div class="col-sm-5"><h3 class="address">' + address + "</h3>";
+      html = '<div class="col-sm-5"><h3>Ubicación de la Casilla</h3>';
+      html += '<h3 class="address">' + address + "</h3>";
       html += "<h4>" + first_element.referencia + "</h4></div>";
 	  
 	  html += '<div class="col-sm-7">'
