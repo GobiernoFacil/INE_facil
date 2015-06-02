@@ -553,7 +553,6 @@ var APP = function(){
       var center = {lat : district_map_center[0],lng : district_map_center[1]};
       
       google_district_map = this._draw_map(center, 15, district_map);
-      console.log(this._draw_markers,google_district_map, current_district_data.cities);
       // this._draw_polygon(google_district_map);
       this._draw_markers(google_district_map, current_district_data.cities);
       district_map_container.className = "open";
@@ -628,7 +627,6 @@ var APP = function(){
     // ----------------
     //
     _draw_markers : function(map, cities){
-      console.log("markers!!!");
       var points = [];
       google_markers_array.forEach(function(el){
         el.setMap(null);
@@ -662,7 +660,6 @@ var APP = function(){
     // ----------------
     //
     _set_bounds : function(map, points){
-      console.log(map, points);
       var bounds = new google.maps.LatLngBounds();
 
       points.forEach(function(point){
