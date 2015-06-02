@@ -6,8 +6,17 @@
 				<a href="http://gobiernofacil.com/" class="gobiernofacil">Gobierno Fácil</a>
 				<p> © 2014 -2015</p>
 			</div>
-			<div class="col-sm-3 col-sm-offset-4">
-				<span class="branding">Este sitio usa herramientas del</span> 
+			<div class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2">
+				<ul>
+					<li><a href="/">INE Fácil</a></li>
+					<li><a href="/candidatos-diputados-federales-2015/">Candidatos a Diputados</a></li>
+					<li><a href="/diputados-por-estado-circunscripciones-electorales/">Diputados por Estado</a></li>
+					<li><a href="/acerca-de-ine-facil/">Acerca del Sitio</a></li>
+					<li><a href="/contacto/">Contacto</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-2 right">
+				<span class="branding">Con herramientas del</span> 
 				<a href="http://surrealista.mx/" class="pato">Partido Surrealista</a>
 			</div>
 		</div>
