@@ -1023,12 +1023,21 @@ section.container {
   text-align: center;
   font-size: 21px;
   line-height: 0px !important; }
-  .divider:after {
+  .divider:before {
     content: attr(data-text);
     color: white;
     padding: 20px 30px;
     font: 700 21px/0 "soberana", Helvetica, Arial, sans-serif;
     background-color: #3A3838; }
+  .divider h1 {
+    display: block;
+    border: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr; }
 
 #graph2 svg {
   height: 450px;
@@ -1430,6 +1439,15 @@ section.container {
     background-position: 0 top; }
     .md-content .partidin.pri.pvem {
       background-position: 0 top, 40px top; }
+
+/* =About
+-------------------------------------------------------------- */
+.about a {
+  color: #FF3B77; }
+  .about a:hover {
+    color: #ee407c; }
+.about p:last-child {
+  margin-bottom: 60px; }
 
 /* Effect Slide from the bottom */
 .effect .md-content {

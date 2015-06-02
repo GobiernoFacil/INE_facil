@@ -9,13 +9,17 @@
 	<div class="row">		
 		<div class="divider" data-text="Diputados por Estado"></div>
 		<div class="col-md-12">	
-			<h1>Total de Diputados elegidos por Estado</h1>
+			<h1>Total de Diputados elegidos por Estados y Distrito Federal</h1>
 			<div class="row viz">
 				<div class="col-sm-8 col-sm-offset-2">
 				<div id="graph"><p>hola</p></div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="row">
 		<div class="divider" data-text="Circunscripciones Electorales"></div>
+		<div class="col-md-12">	
 			<h2>Mapa de las circunscripciones electorales de México</h2>
 			<div class="row viz">
 				<div class="col-sm-8 col-sm-offset-2">
