@@ -150,15 +150,8 @@ dataset = dataset.sort(function(x,y){return y.diputados - x.diputados } );
 //Create scale functions
 var xScale = d3.scale.linear()
  				.domain([0, d3.max(dataset, function(d, i) { return d.diputados; })])
-				.range([0,w]);
-						 
-var yScale = d3.scale.linear()
-					.domain([0, 1])
-					.range([1, h - padding  * 2]);	
+				.range([0,1]);
 
-var yScaleAxis = d3.scale.linear()
-					.domain([0,1])
-					.range([h - padding , padding]);
 	
 //agrega escala para color
 	  var colorScaleBar = d3.scale.linear()
@@ -186,9 +179,10 @@ var yScaleAxis = d3.scale.linear()
 
       // draw the bars
       bars.append('span')
-        .attr('class', 'bar')        
+        .attr('class', 'bar')
+        .append('b')        
         .style('width', function(d){
-          return xScale(d.diputados) + 'px';
+          return xScale(d.diputados) * 100+ '%';
         })
         // agrega colorScaleBar
         .style('background', function(d){
