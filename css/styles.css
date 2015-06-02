@@ -1442,11 +1442,11 @@ section.container {
 
 /* =About
 -------------------------------------------------------------- */
-.about a {
+.about a, .contact a {
   color: #FF3B77; }
-  .about a:hover {
+  .about a:hover, .contact a:hover {
     color: #ee407c; }
-.about p:last-child {
+.about p:last-child, .contact p:last-child {
   margin-bottom: 60px; }
 
 /* Effect Slide from the bottom */
