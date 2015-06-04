@@ -1,6 +1,9 @@
 // el script de la gráfica
 
-var graph = document.querySelector("#graph");
+var graph 			 = document.querySelector("#graph"),
+	total_candidatos = document.querySelector("#total_candidatos");
+	total_mayoria 	 = document.querySelector("#mayoria");
+	total_relativa 	 = document.querySelector("#relativa");
 
 // CLEAN THE BARCHART
 graph.innerHTML = "";
@@ -213,9 +216,6 @@ var xScale = d3.scale.linear()
             .range(['#cff3ff', '#7ec8f2']) 
             .domain([1, 750000]);
 
-  /*    // RENDER THE TOTAL TOURIST LABEL
-      this.$('#tourist-year-map-label').html(year);
-      this.$('#tourist-total-map-label').html(this.format(total));*/
 
       
       // PREPARE THE DATA			
@@ -461,3 +461,174 @@ var dataset_map = [
                 .attr("y", (y +15));
          
         });
+
+
+// PREPARE THE DATA			
+var dataset_partidos = [
+  {
+    "partido":"PAN",
+    "mr":300,
+    "rp":200
+  },
+  {
+    "partido":"PRI",
+    "mr":50,
+    "rp":200
+  },
+  {
+    "partido":"PRD",
+    "mr":200,
+    "rp":200
+  },
+  {
+    "partido":"PT",
+    "mr":200,
+    "rp":200
+  },
+  {
+    "partido":"PVEM",
+    "mr":50,
+    "rp":200
+  },
+  {
+    "partido":"Movimiento Ciudadano",
+    "mr":300,
+    "rp":200
+  },
+  {
+    "partido":"Nueva Alianza",
+    "mr":300,
+    "rp":200
+  },
+  {
+    "partido":"Morena",
+    "mr":300,
+    "rp":199
+  },
+  {
+    "partido":"Partido Humanista",
+    "mr":294,
+    "rp":134
+  },
+  {
+    "partido":"Encuentro Social",
+    "mr":300,
+    "rp":118
+  },
+  {
+    "partido":"PRI + PVEM",
+    "mr":250,
+    "rp":0
+  },
+  {
+    "partido":"PRD + PT",
+    "mr":100,
+    "rp":0
+  },
+  {
+    "partido":"Independiente",
+    "mr":22,
+    "rp":0
+  }
+];
+
+dataset_partidos = dataset_partidos.sort(function(x,y){return y.mr - x.mr } );
+		
+//Create scale functions
+var xScale = d3.scale.linear()
+ 				.domain([0, d3.max(dataset_partidos, function(d, i) { return d.mr; })])
+				.range([0,1]);
+
+var sum_votada   	= d3.sum(dataset_partidos, function(d) { return d.mr; }),
+	sum_representa  = d3.sum(dataset_partidos, function(d) { return d.rp; }),
+	sum_total		= sum_votada + sum_representa ;
+
+	// add total candidatos
+	total_candidatos.innerHTML  = sum_total;	
+	total_mayoria.innerHTML 	= sum_votada;	
+	total_relativa.innerHTML 	= sum_representa;	
+		
+//agrega escala para color
+var colorScaleBar = d3.scale.linear()
+  .range(['#999', '#FF3B77']) 
+  .domain([0, d3.max(dataset_partidos, function(d, i) { return d.mr; })])	
+
+  	// draw the bars container
+var bars = d3.select('#graph3')
+  .selectAll('p')
+  .data(dataset_partidos)
+  .enter()
+    .append('p');
+
+// draw the labels
+bars.append('span')
+  .attr('class', 'label')
+
+  //agrega strong para diferencia de index
+  .append('strong')
+   	.text(function(d,i){
+     return  d.partido + ': ';
+  });
+
+// draw the bars
+bars.append('span')
+  .attr('class', 'bar')
+  .append('b')        
+  .style('width', function(d){
+    return xScale(d.mr) * 100+ '%';
+  })
+  // agrega colorScaleBar
+  .style('background', function(d){
+  return colorScaleBar(d.mr);
+  })
+  //metemos valor en span
+  .append('span')
+  	.attr('class','value')
+  	.text(function(d){
+  		var value 	= d.mr,
+  			//formato a valor
+  			valuef 	= value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  		return valuef;
+  });
+  
+
+////// RP
+dataset_partidos = dataset_partidos.sort(function(x,y){return y.rp - x.rp } );
+
+// draw the bars container
+var bars = d3.select('#graph4')
+  .selectAll('p')
+  .data(dataset_partidos)
+  .enter()
+    .append('p');
+
+// draw the labels
+bars.append('span')
+  .attr('class', 'label')
+
+  //agrega strong para diferencia de index
+  .append('strong')
+   	.text(function(d,i){
+     return  d.partido + ': ';
+  });
+
+// draw the bars
+bars.append('span')
+  .attr('class', 'bar')
+  .append('b')        
+  .style('width', function(d){
+    return xScale(d.rp) * 100+ '%';
+  })
+  // agrega colorScaleBar
+  .style('background', function(d){
+  return colorScaleBar(d.rp);
+  })
+  //metemos valor en span
+  .append('span')
+  	.attr('class','value')
+  	.text(function(d){
+  		var value 	= d.rp,
+  			//formato a valor
+  			valuef 	= value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  		return valuef;
+  });

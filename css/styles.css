@@ -1178,33 +1178,33 @@ section.container {
 .viz {
   padding-bottom: 120px; }
 
-#graph p {
+#graph p, #graph3 p, #graph4 p {
   margin: 0 0 5px;
   font-size: 14px; }
-  #graph p strong {
+  #graph p strong, #graph3 p strong, #graph4 p strong {
     font-weight: 500;
     color: #3A3838; }
-  #graph p .label {
+  #graph p .label, #graph3 p .label, #graph4 p .label {
     color: #ccc;
     display: inline-block;
     width: 30%;
     text-align: right;
     padding-right: 6px;
     font-weight: 300; }
-  #graph p span.bar {
+  #graph p span.bar, #graph3 p span.bar, #graph4 p span.bar {
     display: inline-block;
     background-color: transparent;
     width: 70%; }
-    #graph p span.bar b {
+    #graph p span.bar b, #graph3 p span.bar b, #graph4 p span.bar b {
       display: block; }
-    #graph p span.bar span.value {
+    #graph p span.bar span.value, #graph3 p span.bar span.value, #graph4 p span.bar span.value {
       color: transparent;
       margin-left: 5px;
       display: inline-block; }
-    #graph p span.bar:hover b {
+    #graph p span.bar:hover b, #graph3 p span.bar:hover b, #graph4 p span.bar:hover b {
       background: #3A3838 !important;
       cursor: pointer; }
-      #graph p span.bar:hover b .value {
+      #graph p span.bar:hover b .value, #graph3 p span.bar:hover b .value, #graph4 p span.bar:hover b .value {
         color: white; }
 
 .lead {
@@ -1276,6 +1276,8 @@ section.container {
   font-size: 27px;
   text-align: center;
   font-weight: 700; }
+.diputados h2 {
+  margin-bottom: 20px; }
 .diputados h3 {
   text-align: left;
   font-size: 17px;
@@ -1294,7 +1296,7 @@ section.container {
     background: #FFF6E5; }
   .diputados h3 .cir5 {
     background: #FF7F66; }
-.diputados #graph {
+.diputados #graph, .diputados #graph3, .diputados #graph4 {
   padding-bottom: 120px; }
 .diputados #graph2 {
   margin: 40px 0; }

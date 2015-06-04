@@ -12,7 +12,25 @@
 			<h1>Total de Diputados elegidos por Estados y Distrito Federal</h1>
 			<div class="row viz">
 				<div class="col-sm-8 col-sm-offset-2">
-				<div id="graph"><p>hola</p></div>
+				<div id="graph"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">		
+		<div class="divider" data-text="Total de candidatos a Diputado Federal por Partido"></div>
+		<div class="col-md-12">	
+			<div class="row viz">
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2><span id="total_candidatos"></span> candidatos a Diputados Federales</h2>
+					<p  class="lead"><strong id="mayoria"></strong> candidatos a Diputados Federales por mayoría relativa,
+						 representantes electos mediante el voto directo y secreto de los ciudadanos en los trescientos distritos electorales
+						  que conforman el país. </p>
+					<div id="graph3"></div>
+					<p  class="lead"><strong id="relativa"></strong> candidatos a Diputados Federales por representación proporcional,
+						 representantes electos mediante el porcentaje de votos que cada partido político obtiene en cada una de las cinco circunscripciones o regiones electorales
+				 en las que está divido el país. </p>
+					<div id="graph4"></div>
 				</div>
 			</div>
 		</div>
@@ -21,8 +39,11 @@
 		<div class="divider" data-text="Circunscripciones Electorales"></div>
 		<div class="col-md-12">	
 			<h2>Mapa de las circunscripciones electorales de México</h2>
+			
 			<div class="row viz">
 				<div class="col-sm-8 col-sm-offset-2">
+					<p class="lead">Las circunscripciones electorales se usan para designar a los Diputados por representación proporcional.
+				</p>
 				<div id="graph2">
 					<?php	include "templates/mexico_map.php";?>
 				</div>
