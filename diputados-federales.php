@@ -22,12 +22,12 @@
 		<div class="col-md-12">	
 			<div class="row viz">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h2><span id="total_candidatos"></span> candidatos a Diputados Federales</h2>
-					<p  class="lead"><strong id="mayoria"></strong> candidatos a Diputados Federales por mayoría relativa,
+					<h2><span id="total_candidatos"></span> candidatos a Diputado Federal</h2>
+					<p  class="lead"><strong id="mayoria"></strong> candidatos a Diputado Federal por mayoría relativa,
 						 representantes electos mediante el voto directo y secreto de los ciudadanos en los trescientos distritos electorales
 						  que conforman el país. </p>
 					<div id="graph3"></div>
-					<p  class="lead"><strong id="relativa"></strong> candidatos a Diputados Federales por representación proporcional,
+					<p  class="lead"><strong id="relativa"></strong> candidatos a Diputado Federal por representación proporcional,
 						 representantes electos mediante el porcentaje de votos que cada partido político obtiene en cada una de las cinco circunscripciones o regiones electorales
 				 en las que está divido el país. </p>
 					<div id="graph4"></div>
