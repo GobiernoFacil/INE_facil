@@ -1,7 +1,7 @@
 // el script para el timer del inicio
 
 var today    = new Date(),
-    election = new Date(2015, 5, 7),
+    election = new Date(2015, 5, 7, 8),
     clock    = document.querySelector("#countdown"),
     timer, html, interval;
 
@@ -18,7 +18,7 @@ if(today < election){
 
     if(!timespan.days && !timespan.hours && !timespan.minutes && timespan.seconds < 3){
       clearInterval(interval);
-      clock.innerHTML = "YA YA YA !!!!!";
+      clock.innerHTML = "¡A votar!!!!!";
     }
   }, 1000);
 }
