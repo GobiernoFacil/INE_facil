@@ -88,8 +88,8 @@
 				<!-- la información de la casilla seleccionada -->
 				<section class="casilla">
 					 <h2>03. Ubica tu casilla</h2>
-					 <p class="lead">Está es tu ubicación actual, si esta no es tu ubicación, arrastra el marcador en el mapa para mostrar
-						 la información de la casilla.
+					 <p class="lead">Esta es tu ubicación actual, si no corresponde a la dirección de tu credencial arrastra el marcador en el mapa a 
+						 esa ubicación para mostrar la información de tu casilla.
 					 </p>
 					 <!-- el mapa de las casillas -->
 					 <div id="city-map-container">
