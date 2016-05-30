@@ -38,8 +38,10 @@
   <script src="/js/main.partidos.js"></script>
 <?php endif; ?>
 
+<?php if($body_class == "el_home"): ?>
 <script src="/js/bower_components/countdownjs/countdown.min.js"></script>
-	<script src="/js/main.home.js"></script>
+<script src="/js/main.home.js"></script>
+	<?php endif; ?>
 	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
