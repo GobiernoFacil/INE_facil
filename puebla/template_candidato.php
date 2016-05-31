@@ -43,7 +43,7 @@
 				<header>
 					<h4>Candidato a Gobernador de Puebla.</h4>
 					<h2><?php echo $nombre;?></h2>
-					<p class="partidin pan"></p>
+					<p class="partidin <?php echo $partido;?>"></p>
 				</header>
 				<h3>Trayectoria en administraciones públicas</h3>
 				<ul>
@@ -54,9 +54,13 @@
 				<!--laboral-->
 				<h3>Trayectoria laboral</h3>
 				<ul>
+					<?php if ($laboral):?>
 					<?php foreach ($laboral as $l):?>
 					<li><?php echo $l['descripcion'];?> <?php echo $l['fecha'] ? '<span>(' .$l['fecha'] .')</span>' : '';?></li>
 					<?php endforeach;?>
+					<?php else:?>
+					<li>Sin Datos</li>
+					<?php endif;?>
 				</ul>
 				<!--- patrimonial--->
 				<h3>Declaración Patrimonial</h3>

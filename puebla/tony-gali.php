@@ -17,6 +17,7 @@
 	$web			= "http://tonygali.mx/";
 	$tw				= "https://twitter.com/TonyGali";
 	$fb				= "https://www.facebook.com/TonyGaliFayad";
+	$partido		= "pan";
 	
 	//trayectoria
 	$trayectoria = [
