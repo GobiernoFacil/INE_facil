@@ -76,7 +76,7 @@
 							<li class="col-sm-5"><span>Ingresos por Actividad Financiera</span> <strong>$<?php echo number_format($ingreso_actividad_financiera, 2, '.', ',');?></strong></li>
 						</ul>
 						<!--inmuebles-->
-						<h3>Bienes inmuebles: <strong>$<?php echo number_format($valor_inmueble, 2, '.', ',');?></strong></h3>
+						<h3>Bienes inmuebles: <strong>$<?php echo number_format($valor_inmueble, 2, '.', ',');?></strong> <?php echo $moneda;?></h3>
 						<ul class="row">
 							<li class="col-sm-4"><span>Inmuebles</span> <strong><?php echo $inmuebles ;?></strong></li>
 							<li class="col-sm-4"><span>Superficie de Terreno</span> <strong><?php echo number_format($sup_terreno_m2, 2,'.',',') ;?></strong></li>

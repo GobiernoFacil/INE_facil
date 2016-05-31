@@ -56,6 +56,7 @@
 	$ingreso_actividad_financiera =0;
 	//inmuebles
 	$valor_inmueble			= 117958000.00;
+	$moneda					= "MXP – Viejos pesos";
 	$inmuebles				= 2;
 	$sup_terreno_m2			= 0;
 	$sup_construccion		= 115;

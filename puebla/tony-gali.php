@@ -47,6 +47,7 @@
 	$ingreso_actividad_financiera =205375.24;
 	//inmuebles
 	$valor_inmueble			= 16713961.8;
+	$moneda					= "MXN";
 	$inmuebles				= 6;
 	$sup_terreno_m2			= 19544.53;
 	$sup_construccion		= 1596.26;
