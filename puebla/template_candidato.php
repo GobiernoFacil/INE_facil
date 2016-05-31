@@ -47,9 +47,13 @@
 				</header>
 				<h3>Trayectoria en administraciones públicas</h3>
 				<ul>
+					<?php if ($trayectoria):?>
 					<?php foreach ($trayectoria as $t):?>
 					<li><?php echo $t['descripcion'];?> <?php echo $t['fecha'] ? '<span>(' .$t['fecha'] .')</span>' : '';?></li>
 					<?php endforeach;?>
+					<?php else:?>
+					<li>Sin Datos</li>
+					<?php endif;?>
 				</ul>
 				<!--laboral-->
 				<h3>Trayectoria laboral</h3>
