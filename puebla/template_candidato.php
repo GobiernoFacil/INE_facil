@@ -43,7 +43,7 @@
 				<header>
 					<h4>Candidato a Gobernador de Puebla.</h4>
 					<h2><?php echo $nombre;?></h2>
-					<p class="partidin <?php echo $partido;?>"></p>
+					<p class="partidin <?php echo $partido;?>"><?php echo !$partido ? "Independiente" :  '' ;?></p>
 				</header>
 				<h3>Trayectoria en administraciones públicas</h3>
 				<ul>
