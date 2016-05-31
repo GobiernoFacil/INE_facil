@@ -2,7 +2,7 @@
 	$body_class 	= "puebla candidato";
 	$title 			= "Tony Gali candidato a Gobernador en Puebla 2016";
 	$description 	= "Tony Gali";
-	$canonical		= "http://inefacil.com/";
+	$canonical		= "http://inefacil.com/puebla/tony-gali";
 	include  $_SERVER['DOCUMENT_ROOT']."/templates/header.php";
 	
 	// datos candidato

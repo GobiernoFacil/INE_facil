@@ -5,9 +5,7 @@
 
 	$title 			= $nombre . " candidato a Gobernador en Puebla 2016";
 	$description 	= $nombre;
-	$canonical		= "http://inefacil.com/puebla/";
-
-
+	$canonical		= "http://inefacil.com/puebla/blanca-alcala";
 	include  $_SERVER['DOCUMENT_ROOT']."/templates/header.php";
 	
 	// datos candidato
