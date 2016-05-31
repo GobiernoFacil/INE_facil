@@ -2,7 +2,7 @@
 	$body_class 	= "puebla candidatos";
 	$title 			= "Elección a Gobernador en Puebla 2016";
 	$description 	= "Conoce los candidatos a gobernadores en Puebla.";
-	$canonical		= "http://inefacil.com/";
+	$canonical		= "http://inefacil.com/puebla";
 	include  $_SERVER['DOCUMENT_ROOT']."/templates/header.php";?>
 
 
