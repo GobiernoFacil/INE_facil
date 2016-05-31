@@ -14,7 +14,7 @@
 				<!--<p class="lead"><strong>12 gobernadores</strong>, 448 diputados, y 965 ayuntamientos.</p>-->
 				<ul class="row diputables">
 					<li class="col-xs-6 col-sm-3">
-					  <a class="profile_candito" href="/">
+					  <a class="profile_candito" href="/puebla/blanca-alcala">
 					    <figure><img src="/img/puebla/blanca-alcala.jpg" alt="Blanca Alcalá">
 					    	<b>+ información</b>
 					    </figure>
@@ -23,8 +23,8 @@
 					  </a>
 					</li>
 					<li class="col-xs-6 col-sm-3">
-					  <a class="profile_candito" href="/">
-					    <figure><img src="/img/puebla/ana-teresa-aranda.jpg">
+					  <a class="profile_candito" href="/puebla/ana-teresa-aranda">
+					    <figure><img src="/img/puebla/ana-teresa-aranda.jpg" alt="ANA TERESA ARANDA OROZCO">
 					    	<b>+ información</b>
 					    </figure>
 					    <span>ANA TERESA ARANDA OROZCO</span>
@@ -32,8 +32,8 @@
 					  </a>
 					</li>
 					<li class="col-xs-6 col-sm-3">
-					  <a class="profile_candito" href="/puebla/tony-gali.php">
-					    <figure><img src="/img/puebla/tony-gali.jpg">
+					  <a class="profile_candito" href="/puebla/tony-gali">
+					    <figure><img src="/img/puebla/tony-gali.jpg" alt="Tony Gali">
 					    	<b>+ información</b>
 					    </figure>
 					    <span>José Antonio Gali Fayad</span>
@@ -42,8 +42,8 @@
 					</li>
 					
 					<li class="col-xs-6 col-sm-3">
-					  <a class="profile_candito" href="/">
-					    <figure><img src="/img/puebla/roxana-luna.jpg">
+					  <a class="profile_candito" href="/puebla/roxana-luna">
+					    <figure><img src="/img/puebla/roxana-luna.jpg" alt="Roxana Luna">
 					    	<b>+ información</b>
 					    </figure>
 					    <span>Roxana  Luna Porquillo</span>
@@ -52,8 +52,8 @@
 					</li>
 					
 					<li class="col-xs-6 col-sm-3">
-					  <a class="profile_candito" href="/">
-					    <figure><img src="/img/puebla/abraham-quiroz.jpg">
+					  <a class="profile_candito" href="/puebla/abraham-quiroz">
+					    <figure><img src="/img/puebla/abraham-quiroz.jpg" alt="Abraham Quiroz">
 					    	<b>+ información</b>
 					    </figure>
 					    <span>Abraham Quiroz Palacios</span>
