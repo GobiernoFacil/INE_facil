@@ -24,6 +24,7 @@
 						<a href="<?php echo $fb;?>" class="links">fb</a>
 					</p>
 				</div>
+				
 			</div>
 			<?php 
 			
@@ -50,7 +51,7 @@
 				<!--- patrimonial--->
 				<h3>Declaración Patrimonial</h3>
 				<div class="row patrimonial">
-					<div class="col-sm-11 col-sm-offset-1">
+					<div class="col-sm-12">
 						<h3>Ingreso Neto Anual: <strong>$<?php echo number_format($ingreso_neto_anuales, 2, '.', ',');?></strong></h3>
 						<ul class="row">
 							<li class="col-sm-5"><span>Ingresos por cargo público</span> <strong>$<?php echo number_format($ingreso_cargo_publico, 2, '.', ',');?></strong></li>
@@ -88,6 +89,11 @@
 					</div>
 				</div>
 				
+				
+			</div>
+			
+			<!--source-->
+			<div class="col-sm-12">
 				<div class="source">
 					<h4>Fuentes:</h4>
 					<ul>
@@ -96,7 +102,6 @@
 						<li><a href="http://3de3.mx/#/elecciones/2016">TresDeTres</a></li>
 						<li><a href="http://ladobe.com.mx/2016/04/estas-son-las-cinco-personas-que-quieren-tu-voto/">Lado B</a></li>
 					</ul>
-					
 				</div>
 			</div>
 		</div>
