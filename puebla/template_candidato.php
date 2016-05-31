@@ -1,3 +1,7 @@
+<div class="breadcrumb">
+		<a href="/puebla">< Candidatos a Gobernador de Puebla</a>
+
+</div>
 <article class="gobernador_info">
 	<div class="container">
 		<div class="row">
@@ -15,8 +19,14 @@
 					<p><span>Estado Civil:</span>
 						<?php echo $civil;?>
 					</p>
+					<p><span>Cónyuge:</span>
+						<?php echo $conyuge;?>
+					</p>
 					<p><span>Grado Académico:</span>
 						<?php echo $academico;?>
+					</p>
+					<p><span>Declaración Tres de Tres:</span>
+						<?php echo $tresdetres;?>
 					</p>
 					<p><span>Enlaces:</span>
 						<a href="<?php echo $web;?>" class="links">web</a>
@@ -31,7 +41,7 @@
 			?>
 			<div class="col-sm-9">
 				<header>
-					<h4>Candidato a Gobernador, Puebla.</h4>
+					<h4>Candidato a Gobernador de Puebla.</h4>
 					<h2><?php echo $nombre;?></h2>
 					<p class="partidin pan"></p>
 				</header>
@@ -61,8 +71,8 @@
 						<h3>Bienes inmuebles: <strong>$<?php echo number_format($valor_inmueble, 2, '.', ',');?></strong></h3>
 						<ul class="row">
 							<li class="col-sm-4"><span>Inmuebles</span> <strong><?php echo $inmuebles ;?></strong></li>
-							<li class="col-sm-4"><span>Superficie de Terreno</span> <strong><?php echo $sup_terreno_m2 ;?></strong></li>
-							<li class="col-sm-4"><span>Superficie de Construcción</span> <strong><?php echo $sup_construccion ;?></strong></li>
+							<li class="col-sm-4"><span>Superficie de Terreno</span> <strong><?php echo number_format($sup_terreno_m2, 2,'.',',') ;?></strong></li>
+							<li class="col-sm-4"><span>Superficie de Construcción</span> <strong><?php echo number_format($sup_construccion, 2,'.',',') ;?></strong></li>
 						
 							<li class="col-sm-4"><span>Crédito</span> <strong><?php echo $credito ;?></strong></li>
 							<li class="col-sm-4"><span>Cesión</span> <strong><?php echo $cesion ;?></strong></li>

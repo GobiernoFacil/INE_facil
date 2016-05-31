@@ -1240,6 +1240,17 @@ section.container {
 
 /* gobernador
 -----------------------------------*/
+.breadcrumb {
+  background: #ee407c;
+  margin-bottom: 50px; }
+  .breadcrumb a {
+    color: white;
+    font-size: 13px;
+    display: block;
+    padding: 10px 15px; }
+    .breadcrumb a:hover {
+      background: rgba(0, 0, 0, 0.3); }
+
 .gobernador_info {
   margin-bottom: 70px; }
   .gobernador_info header {

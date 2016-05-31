@@ -11,8 +11,9 @@
 	$edad			= 56;
 	$lugar			= "Puebla de Zaragoza";
 	$civil			= "Casado";
-	$civil			= "Casado";
-	$academico		= " Maestría en Administración pública";
+	$conyuge		= "Alma Dinorah López Gargallo";
+	$academico		= "Maestría en Administración pública";
+	$tresdetres		= "Sí";
 	$web			= "http://tonygali.mx/";
 	$tw				= "https://twitter.com/TonyGali";
 	$fb				= "https://www.facebook.com/TonyGaliFayad";
