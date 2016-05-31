@@ -1238,6 +1238,73 @@ section.container {
     color: #999;
     font-size: 12px; }
 
+/* gobernador
+-----------------------------------*/
+.gobernador_info {
+  margin-bottom: 70px; }
+  .gobernador_info header {
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    padding: 10px 0; }
+  .gobernador_info h2 {
+    color: #333;
+    font: 700 25px "soberana", Helvetica, Arial, sans-serif; }
+  .gobernador_info h4 {
+    font-size: 16px; }
+  .gobernador_info p.partidin {
+    min-height: 30px;
+    display: block;
+    margin: 0;
+    background-position: 0; }
+  .gobernador_info .info_gral p {
+    font-size: 14px;
+    margin: 10px 0 1.5em; }
+  .gobernador_info .info_gral span {
+    color: #999;
+    display: block;
+    text-transform: uppercase; }
+  .gobernador_info .info_gral .links {
+    color: #ee407c;
+    display: block; }
+  .gobernador_info ul {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+    padding-bottom: 20px; }
+    .gobernador_info ul.row li {
+      margin: 5px 0;
+      list-style: none; }
+    .gobernador_info ul li {
+      margin: 5px 30px; }
+    .gobernador_info ul span {
+      color: #999;
+      display: block;
+      font-size: 14px; }
+
+.patrimonial {
+  margin-top: 15px; }
+  .patrimonial h3 {
+    background: #ddd;
+    color: #222;
+    font-size: 1.1em;
+    padding: 8px 10px; }
+
+.source {
+  background: #f2f2f2;
+  color: #777;
+  padding: 10px; }
+  .source h4 {
+    font-size: 14px; }
+  .source ul {
+    border: 0;
+    padding: 0;
+    margin: 0; }
+  .source li {
+    font-size: 13px; }
+    .source li a {
+      text-decoration: underline; }
+      .source li a:hover {
+        color: #ee407c; }
+
 /* =los partidos
 -------------------------------------------------------------- */
 .partidin {
