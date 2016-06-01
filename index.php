@@ -47,9 +47,9 @@
 				</div>
 				<div class="col-md-8 col-md-offset-2">
 				<div class="links">
-					<!--<a class="hvr-bounce-to-right" href="/diputados-por-estado-circunscripciones-electorales/">
-						¿Cuántos Diputados federales se eligen por estado? <strong>&gt;</strong>
-					</a>-->
+					<a class="hvr-bounce-to-right" href="/puebla/">
+						Conoce a los candidatos a Gobernador en Puebla 2016 <strong>&gt;</strong>
+					</a>
 				</div>
 			</div>
 
