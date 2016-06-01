@@ -29,9 +29,15 @@
 						<?php echo $tresdetres;?>
 					</p>
 					<p><span>Enlaces:</span>
+						<?php if ($web):?>
 						<a href="<?php echo $web;?>" class="links">web</a>
+						<?php endif;?>
+						<?php if ($tw):?>
 						<a href="<?php echo $tw;?>" class="links">twitter</a>
+						<?php endif;?>
+						<?php if ($fb):?>
 						<a href="<?php echo $fb;?>" class="links">fb</a>
+						<?php endif;?>
 					</p>
 				</div>
 				
