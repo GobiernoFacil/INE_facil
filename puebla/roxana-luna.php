@@ -15,7 +15,7 @@
 	$lugar			= "San Pedro Cholula, Puebla";
 	$civil			= "Soltera";
 	$conyuge		= "No aplica";
-	$academico		= "Maestría en Derecho civil y mercantil";
+	$academico		= "Maestría en Derecho Civil y Mercantil";
 	$tresdetres		= "Sí";
 	$web			= "http://www.roxanaluna.mx/";
 	$tw				= "https://twitter.com/roxanalunap";
@@ -42,7 +42,7 @@
 					];
 	///laboral
 	$laboral	= [	
-						["descripcion"=>"Fundadora de la Organización Nacional los de Abajo.",
+						["descripcion"=>"Fundadora de la Organización Nacional los de Abajo",
 						"fecha"=>"2008",
 						],
 						["descripcion"=>"Abogada litigante",
