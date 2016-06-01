@@ -27,7 +27,7 @@
 					    <figure><img src="/img/puebla/ana-teresa-aranda.jpg" alt="ANA TERESA ARANDA OROZCO">
 					    	<b>+ información</b>
 					    </figure>
-					    <span>ANA TERESA ARANDA OROZCO</span>
+					    <span>Ana Teresa Aranda Orozco</span>
 					    <span class="partidin">Independiente</span>
 					  </a>
 					</li>
