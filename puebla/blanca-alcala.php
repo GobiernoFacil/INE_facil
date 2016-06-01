@@ -14,7 +14,7 @@
 	$lugar			= "Tlaxcala de Xicohténcatl, Tlaxcala";
 	$civil			= "Casada";
 	$conyuge		= "Eduardo Romero Corona";
-	$academico		= "Doctorado en Administración pública";
+	$academico		= "Doctorado en Administración Pública";
 	$tresdetres		= "Sí";
 	$web			= "http://www.soyblancaalcala.com/";
 	$tw				= "https://twitter.com/SoyBlancaAlcala";
